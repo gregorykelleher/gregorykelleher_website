@@ -1,0 +1,9 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   6 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln       1125 Jan 21 16:17 Constant.php
+-rw-r--r--   1 gregory  pemcln       2116 Jan 21 16:17 Defined.php
+-rw-r--r--   1 gregory  pemcln        743 Jan 21 16:17 Divisibleby.php
+-rw-r--r--   1 gregory  pemcln        631 Jan 21 16:17 Even.php
+-rw-r--r--   1 gregory  pemcln        613 Jan 21 16:17 Null.php
+-rw-r--r--   1 gregory  pemcln        628 Jan 21 16:17 Odd.php
+-rw-r--r--   1 gregory  pemcln        685 Jan 21 16:17 Sameas.php

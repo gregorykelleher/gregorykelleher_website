@@ -1,0 +1,11 @@
+email: gregory@gregorykelleher.com
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+fullname: Gregory
+title: null
+state: enabled
+hashed_password: $2y$10$0IZ44FxK.UXQS9z2455ZUecTdVK8wu5.pTN5TFPXRsR6qAKO75Ao6

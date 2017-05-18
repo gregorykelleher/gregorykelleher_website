@@ -1,0 +1,5 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:11 .
+drwxr-xr-x  17 gregory  pemcln       4096 Jan 21 16:11 ..
+-rw-r--r--   1 gregory  pemcln       3836 Jan 21 16:11 Base32.php
+-rw-r--r--   1 gregory  pemcln      11929 Jan 21 16:11 Excerpts.php
+-rw-r--r--   1 gregory  pemcln       6876 Jan 21 16:11 Truncator.php

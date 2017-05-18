@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 620 300" style="enable-background:new 0 0 620 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FE98A6;}
+	.st1{fill:#416A93;}
+	.st2{fill:#2B2727;}
+	.st3{fill:#EFC245;}
+	.st4{fill:#C94141;}
+	.st5{fill:#5380C1;stroke:#2B2727;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:#F7E6D7;stroke:#2B2727;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{fill:#FCF5F0;}
+	.st8{fill:none;stroke:#2B2727;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1">
+	<rect class="st0" width="620" height="300"/>
+</g>
+<g id="Layer_2">
+	<rect x="246.7" y="72" class="st1" width="132.7" height="168.7"/>
+	<rect x="261.7" y="172.2" class="st2" width="6.7" height="127.8"/>
+	<rect x="288.3" y="172.2" class="st3" width="6.7" height="127.8"/>
+	<rect x="275" y="172.2" class="st4" width="6.7" height="127.8"/>
+	<rect x="236.3" y="62.3" class="st5" width="132.7" height="168.7"/>
+	<rect x="266.9" y="78.5" class="st6" width="71.5" height="71.5"/>
+	<path class="st7" d="M324,142h-42.6c-3.6,0-6.5-2.9-6.5-6.5V93c0-3.6,2.9-6.5,6.5-6.5H324c3.6,0,6.5,2.9,6.5,6.5v42.6
+		C330.4,139.1,327.5,142,324,142z"/>
+	<circle class="st8" cx="302.7" cy="114.3" r="7.4"/>
+	<polygon class="st1" points="269,176 249.5,208 269,208 289,208 	"/>
+	<circle class="st1" cx="318.7" cy="192" r="16"/>
+	<path class="st8" d="M111.3,83.5"/>
+</g>
+</svg>

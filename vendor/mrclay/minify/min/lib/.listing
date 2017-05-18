@@ -1,0 +1,11 @@
+drwxr-xr-x   5 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln      31378 Mar 16  2016 CSSmin.php
+-rw-r--r--   1 gregory  pemcln       5089 Mar 16  2016 DooDigestAuth.php
+-rw-r--r--   1 gregory  pemcln      43622 Mar 16  2016 FirePHP.php
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 HTTP
+-rw-r--r--   1 gregory  pemcln      15801 Mar 16  2016 JSMin.php
+-rw-r--r--   1 gregory  pemcln      52368 Mar 16  2016 JSMinPlus.php
+drwxr-xr-x   8 gregory  pemcln       4096 Mar 16  2016 Minify
+-rw-r--r--   1 gregory  pemcln      23589 Mar 16  2016 Minify.php
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 MrClay

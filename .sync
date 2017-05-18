@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "upload" == $1 ];then
+ncftpput -m -u f258832 -p XDC31ui2i!_GJZoP -P 21 185.2.67.7 /webspace/httpdocs/gregorykelleher.com/$2 `dirname $0`/$2/$3
+elif [ 'download' == $1 ];then
+ncftpget -u f258832 -p XDC31ui2i!_GJZoP -P 21 185.2.67.7 `dirname $0`/$2 /webspace/httpdocs/gregorykelleher.com/$2/$3 
+fi

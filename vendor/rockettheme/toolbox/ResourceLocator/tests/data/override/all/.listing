@@ -1,0 +1,6 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:16 .
+drwxr-xr-x   3 gregory  pemcln       4096 Jan 21 16:16 ..
+-rw-r--r--   1 gregory  pemcln          0 Jan 21 16:16 base_all.txt
+-rw-r--r--   1 gregory  pemcln          0 Jan 21 16:16 base_override.txt
+-rw-r--r--   1 gregory  pemcln          0 Jan 21 16:16 local_override.txt
+-rw-r--r--   1 gregory  pemcln          0 Jan 21 16:16 override.txt

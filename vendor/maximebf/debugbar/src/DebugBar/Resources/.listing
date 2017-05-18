@@ -1,0 +1,9 @@
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   7 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln       9275 Jan 21 16:15 debugbar.css
+-rw-r--r--   1 gregory  pemcln      35413 Jan 21 16:15 debugbar.js
+-rw-r--r--   1 gregory  pemcln       6619 Jan 21 16:15 openhandler.css
+-rw-r--r--   1 gregory  pemcln       7258 Jan 21 16:15 openhandler.js
+drwxr-xr-x   5 gregory  pemcln       4096 Mar 16  2016 widgets
+-rw-r--r--   1 gregory  pemcln       5879 Jan 21 16:15 widgets.css
+-rw-r--r--   1 gregory  pemcln      15408 Jan 21 16:15 widgets.js

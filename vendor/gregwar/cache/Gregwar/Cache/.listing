@@ -1,0 +1,8 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln        438 Jan 21 16:15 autoload.php
+-rw-r--r--   1 gregory  pemcln       3811 Jan 21 16:15 CacheInterface.php
+-rw-r--r--   1 gregory  pemcln       9926 Jan 21 16:15 Cache.php
+-rw-r--r--   1 gregory  pemcln       2117 Jan 21 16:15 GarbageCollect.php
+-rw-r--r--   1 gregory  pemcln       1064 Jan 21 16:15 LICENSE
+-rw-r--r--   1 gregory  pemcln       5631 Jan 21 16:15 README.md

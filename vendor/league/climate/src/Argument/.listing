@@ -1,0 +1,7 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   8 gregory  pemcln       4096 Jan 21 16:15 ..
+-rw-r--r--   1 gregory  pemcln       7706 Jan 21 16:15 Argument.php
+-rw-r--r--   1 gregory  pemcln       3702 Jan 21 16:15 Filter.php
+-rw-r--r--   1 gregory  pemcln       5447 Jan 21 16:15 Manager.php
+-rw-r--r--   1 gregory  pemcln       7324 Jan 21 16:15 Parser.php
+-rw-r--r--   1 gregory  pemcln       4825 Jan 21 16:15 Summary.php

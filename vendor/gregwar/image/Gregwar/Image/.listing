@@ -1,0 +1,16 @@
+drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Adapter
+-rw-r--r--   1 gregory  pemcln        534 Jan 21 16:15 autoload.php
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Exceptions
+-rw-r--r--   1 gregory  pemcln       2035 Jan 21 16:15 GarbageCollect.php
+-rw-r--r--   1 gregory  pemcln       2755 Jan 21 16:15 ImageColor.php
+-rw-r--r--   1 gregory  pemcln      18675 Jan 21 16:15 Image.php
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 images
+-rw-r--r--   1 gregory  pemcln       1069 Jan 21 16:15 LICENSE
+-rw-r--r--   1 gregory  pemcln         68 Jan 21 16:15 Makefile
+-rw-r--r--   1 gregory  pemcln        142 Jan 21 16:15 .php_cs
+-rw-r--r--   1 gregory  pemcln        557 Jan 21 16:15 phpunit.xml.dist
+-rw-r--r--   1 gregory  pemcln       8236 Jan 21 16:15 README.md
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Source
+-rw-r--r--   1 gregory  pemcln        212 Jan 21 16:15 .styleci.yml

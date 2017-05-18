@@ -1,0 +1,6 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:11 .
+drwxr-xr-x  17 gregory  pemcln       4096 Jan 21 16:11 ..
+-rw-r--r--   1 gregory  pemcln       2952 Jan 21 16:11 CompiledFile.php
+-rw-r--r--   1 gregory  pemcln        579 Jan 21 16:11 CompiledJsonFile.php
+-rw-r--r--   1 gregory  pemcln        335 Jan 21 16:11 CompiledMarkdownFile.php
+-rw-r--r--   1 gregory  pemcln        323 Jan 21 16:11 CompiledYamlFile.php

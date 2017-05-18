@@ -1,0 +1,6 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:17 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln      18874 Jan 21 16:17 lowerCase.php
+-rw-r--r--   1 gregory  pemcln      20984 Mar 16  2016 lowerCase.ser
+-rw-r--r--   1 gregory  pemcln      19001 Jan 21 16:17 upperCase.php
+-rw-r--r--   1 gregory  pemcln      21127 Mar 16  2016 upperCase.ser

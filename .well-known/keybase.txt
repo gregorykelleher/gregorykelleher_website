@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/gregorykelleher
+--------------------------------------------------------------------
+
+I hereby claim:
+
+* I am an admin of https://gregorykelleher.com
+* I am gregorykelleher (https://keybase.io/gregorykelleher) on keybase.
+* I have a public key ASDO3LfF9_BykGCdyeV8N1b1P6TqMNkkrzqaw7hle1Qn1Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120cedcb7c5f7f07290609dc9e57c3756f53fa4ea30d924af3a9ac3b8657b5427d40a",
+            "host": "keybase.io",
+            "kid": "0120cedcb7c5f7f07290609dc9e57c3756f53fa4ea30d924af3a9ac3b8657b5427d40a",
+            "uid": "f743190a95c9b517b64d09caa5853319",
+            "username": "gregorykelleher"
+        },
+        "service": {
+            "hostname": "gregorykelleher.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.21"
+    },
+    "ctime": 1495057391,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495057377,
+        "hash": "54ee82da40b8ea4d591b283d295758202a864093c975efb94c346214080a268f7d21bc3c9f5b98a3f96b3167b7f72e831e0db4a52ad0db552143967d8d768a89",
+        "seqno": 1091704
+    },
+    "prev": "7b2eb852869d04da6454b04e4c591132d5d8b7decb328caad69e6bc8b91fe38d",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzty3xffwcpBgncnlfDdW9T+k6jDZJK86msO4ZXtUJ9QKp3BheWxvYWTFAwN7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwY2VkY2I3YzVmN2YwNzI5MDYwOWRjOWU1N2MzNzU2ZjUzZmE0ZWEzMGQ5MjRhZjNhOWFjM2I4NjU3YjU0MjdkNDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwY2VkY2I3YzVmN2YwNzI5MDYwOWRjOWU1N2MzNzU2ZjUzZmE0ZWEzMGQ5MjRhZjNhOWFjM2I4NjU3YjU0MjdkNDBhIiwidWlkIjoiZjc0MzE5MGE5NWM5YjUxN2I2NGQwOWNhYTU4NTMzMTkiLCJ1c2VybmFtZSI6ImdyZWdvcnlrZWxsZWhlciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiZ3JlZ29yeWtlbGxlaGVyLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIxIn0sImN0aW1lIjoxNDk1MDU3MzkxLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTUwNTczNzcsImhhc2giOiI1NGVlODJkYTQwYjhlYTRkNTkxYjI4M2QyOTU3NTgyMDJhODY0MDkzYzk3NWVmYjk0YzM0NjIxNDA4MGEyNjhmN2QyMWJjM2M5ZjViOThhM2Y5NmIzMTY3YjdmNzJlODMxZTBkYjRhNTJhZDBkYjU1MjE0Mzk2N2Q4ZDc2OGE4OSIsInNlcW5vIjoxMDkxNzA0fSwicHJldiI6IjdiMmViODUyODY5ZDA0ZGE2NDU0YjA0ZTRjNTkxMTMyZDVkOGI3ZGVjYjMyOGNhYWQ2OWU2YmM4YjkxZmUzOGQiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECtVDSNRFeqsTU/Nxi9JksGMFR0iQ61ZLLIO7s5MDTz6M7cJ5Wiax3OZagdzNEUNXNGbmMLs9KIAvQDiGhjkjQGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgOIwyjr0iFB+HGnJQ8bfiLDX0JjotfbP9NHP8yykwJJKjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gregorykelleher
+
+==================================================================
+

@@ -1,0 +1,12 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln       1592 Jan 21 16:16 ArrayAccess.php
+-rw-r--r--   1 gregory  pemcln       1177 Jan 21 16:16 ArrayAccessWithGetters.php
+-rw-r--r--   1 gregory  pemcln        467 Jan 21 16:16 Constructor.php
+-rw-r--r--   1 gregory  pemcln        386 Jan 21 16:16 Countable.php
+-rw-r--r--   1 gregory  pemcln        623 Jan 21 16:16 ExportInterface.php
+-rw-r--r--   1 gregory  pemcln       1094 Jan 21 16:16 Export.php
+-rw-r--r--   1 gregory  pemcln       1627 Jan 21 16:16 Iterator.php
+-rw-r--r--   1 gregory  pemcln       5441 Jan 21 16:16 NestedArrayAccess.php
+-rw-r--r--   1 gregory  pemcln       1189 Jan 21 16:16 NestedArrayAccessWithGetters.php
+-rw-r--r--   1 gregory  pemcln        723 Jan 21 16:16 Serializable.php

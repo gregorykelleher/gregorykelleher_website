@@ -1,0 +1,16 @@
+drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:16 .
+drwxr-xr-x   9 gregory  pemcln       4096 Jan 21 16:16 ..
+-rw-r--r--   1 gregory  pemcln        752 Jan 21 16:16 BufferingLogger.php
+-rw-r--r--   1 gregory  pemcln       1043 Jan 21 16:16 CHANGELOG.md
+-rw-r--r--   1 gregory  pemcln       1000 Jan 21 16:16 composer.json
+-rw-r--r--   1 gregory  pemcln      11932 Jan 21 16:16 DebugClassLoader.php
+-rw-r--r--   1 gregory  pemcln       1789 Jan 21 16:16 Debug.php
+-rw-r--r--   1 gregory  pemcln      24673 Jan 21 16:16 ErrorHandler.php
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:16 Exception
+-rw-r--r--   1 gregory  pemcln      16180 Jan 21 16:16 ExceptionHandler.php
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:16 FatalErrorHandler
+-rw-r--r--   1 gregory  pemcln       1065 Jan 21 16:16 LICENSE
+-rw-r--r--   1 gregory  pemcln        930 Jan 21 16:16 phpunit.xml.dist
+-rw-r--r--   1 gregory  pemcln        482 Jan 21 16:16 README.md
+drwxr-xr-x   3 gregory  pemcln       4096 Jan 21 16:16 Resources
+drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:16 Tests

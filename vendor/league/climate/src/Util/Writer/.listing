@@ -1,0 +1,7 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   5 gregory  pemcln       4096 Jan 21 16:15 ..
+-rw-r--r--   1 gregory  pemcln        700 Jan 21 16:15 Buffer.php
+-rw-r--r--   1 gregory  pemcln       2108 Jan 21 16:15 File.php
+-rw-r--r--   1 gregory  pemcln        266 Jan 21 16:15 StdErr.php
+-rw-r--r--   1 gregory  pemcln        266 Jan 21 16:15 StdOut.php
+-rw-r--r--   1 gregory  pemcln        187 Jan 21 16:15 WriterInterface.php

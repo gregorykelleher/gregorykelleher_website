@@ -1,0 +1,9 @@
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln        150 Mar 16  2016 .gitattributes
+-rw-r--r--   1 gregory  pemcln       6416 Mar 16  2016 HISTORY.txt
+-rw-r--r--   1 gregory  pemcln       1558 Mar 16  2016 LICENSE.txt
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 min
+-rw-r--r--   1 gregory  pemcln       6028 Mar 16  2016 MIN.txt
+-rw-r--r--   1 gregory  pemcln       2240 Mar 16  2016 README.txt
+-rw-r--r--   1 gregory  pemcln        624 Mar 16  2016 UPGRADING.txt

@@ -1,0 +1,17 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:11 .
+drwxr-xr-x  17 gregory  pemcln       4096 Jan 21 16:11 ..
+-rw-r--r--   1 gregory  pemcln        497 Jan 21 16:11 AssetsProcessor.php
+-rw-r--r--   1 gregory  pemcln        515 Jan 21 16:11 ConfigurationProcessor.php
+-rw-r--r--   1 gregory  pemcln        481 Jan 21 16:11 DebuggerAssetsProcessor.php
+-rw-r--r--   1 gregory  pemcln        466 Jan 21 16:11 DebuggerInitProcessor.php
+-rw-r--r--   1 gregory  pemcln        472 Jan 21 16:11 ErrorsProcessor.php
+-rw-r--r--   1 gregory  pemcln       1190 Jan 21 16:11 InitializeProcessor.php
+-rw-r--r--   1 gregory  pemcln       1200 Jan 21 16:11 PagesProcessor.php
+-rw-r--r--   1 gregory  pemcln        512 Jan 21 16:11 PluginsProcessor.php
+-rw-r--r--   1 gregory  pemcln        341 Jan 21 16:11 ProcessorBase.php
+-rw-r--r--   1 gregory  pemcln        292 Jan 21 16:11 ProcessorInterface.php
+-rw-r--r--   1 gregory  pemcln        524 Jan 21 16:11 RenderProcessor.php
+-rw-r--r--   1 gregory  pemcln        490 Jan 21 16:11 SiteSetupProcessor.php
+-rw-r--r--   1 gregory  pemcln        535 Jan 21 16:11 TasksProcessor.php
+-rw-r--r--   1 gregory  pemcln        448 Jan 21 16:11 ThemesProcessor.php
+-rw-r--r--   1 gregory  pemcln        440 Jan 21 16:11 TwigProcessor.php

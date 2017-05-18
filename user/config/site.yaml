@@ -1,0 +1,27 @@
+title: Gregory Kelleher
+intro: Hello, my name is Gregory and welcome to my website
+
+# Avatar must be uploaded to theme "img" folder.
+intro_avatar: avatar.svg
+author:
+  name: Gregory Kelleher
+  email: 'gregory@gregorykelleher.com'
+  footer: Gregory Kelleher 2017
+  #footer2:
+
+metadata:
+    description: 'Personal website for Gregory Kelleher'
+
+social: 
+  - icon: send
+    link: "mailto:gregory@gregorykelleher.com" 
+  - icon: youtube
+    link: "https://www.youtube.com/user/Spokkam/" 
+  - icon: github
+    link: "https://github.com/gregorykelleher"  
+  - icon: linkedin
+    link: "https://ie.linkedin.com/in/gregorykelleher"   
+  - icon: dribbble
+    link: "https://dribbble.com/GregoryKelleher"   
+  - icon: twitter
+    link: "https://twitter.com/KelleherGregory"

@@ -1,0 +1,7 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   4 gregory  pemcln       4096 Jan 21 16:15 ..
+-rw-r--r--   1 gregory  pemcln       3951 Jan 21 16:15 Ansi.php
+-rw-r--r--   1 gregory  pemcln        305 Jan 21 16:15 NonAnsi.php
+-rw-r--r--   1 gregory  pemcln        571 Jan 21 16:15 ParserFactory.php
+-rw-r--r--   1 gregory  pemcln        441 Jan 21 16:15 ParserImporter.php
+-rw-r--r--   1 gregory  pemcln        737 Jan 21 16:15 Parser.php

@@ -1,0 +1,9 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
+-rw-r--r--   1 gregory  pemcln       3843 Jan 21 16:16 ApplicationDescription.php
+-rw-r--r--   1 gregory  pemcln        737 Jan 21 16:16 DescriptorInterface.php
+-rw-r--r--   1 gregory  pemcln       3595 Jan 21 16:16 Descriptor.php
+-rw-r--r--   1 gregory  pemcln       5001 Jan 21 16:16 JsonDescriptor.php
+-rw-r--r--   1 gregory  pemcln       5114 Jan 21 16:16 MarkdownDescriptor.php
+-rw-r--r--   1 gregory  pemcln      10789 Jan 21 16:16 TextDescriptor.php
+-rw-r--r--   1 gregory  pemcln       9555 Jan 21 16:16 XmlDescriptor.php

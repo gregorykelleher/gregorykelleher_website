@@ -1,0 +1,7 @@
+drwxr-xr-x   5 gregory  pemcln       4096 Jan 21 16:11 .
+drwxr-xr-x   4 gregory  pemcln       4096 Mar 16  2016 ..
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Cli
+-rw-r--r--   1 gregory  pemcln       1086 Jan 21 16:11 ConsoleCommand.php
+-rw-r--r--   1 gregory  pemcln       4374 Jan 21 16:11 ConsoleTrait.php
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:11 Gpm
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:11 TerminalObjects

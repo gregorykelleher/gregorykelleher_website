@@ -1,0 +1,5 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   5 gregory  pemcln       4096 Jan 21 16:11 ..
+-rw-r--r--   1 gregory  pemcln        748 Jan 21 16:11 AbstractPackageCollection.php
+-rw-r--r--   1 gregory  pemcln        699 Jan 21 16:11 CachedCollection.php
+-rw-r--r--   1 gregory  pemcln        937 Jan 21 16:11 Package.php

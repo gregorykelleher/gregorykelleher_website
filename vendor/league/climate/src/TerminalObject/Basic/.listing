@@ -1,0 +1,17 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
+drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:15 ..
+-rw-r--r--   1 gregory  pemcln        637 Jan 21 16:15 BasicTerminalObjectInterface.php
+-rw-r--r--   1 gregory  pemcln        969 Jan 21 16:15 BasicTerminalObject.php
+-rw-r--r--   1 gregory  pemcln       1203 Jan 21 16:15 Border.php
+-rw-r--r--   1 gregory  pemcln        251 Jan 21 16:15 Br.php
+-rw-r--r--   1 gregory  pemcln        304 Jan 21 16:15 Clear.php
+-rw-r--r--   1 gregory  pemcln       4748 Jan 21 16:15 Columns.php
+-rw-r--r--   1 gregory  pemcln        554 Jan 21 16:15 Draw.php
+-rw-r--r--   1 gregory  pemcln        540 Jan 21 16:15 Dump.php
+-rw-r--r--   1 gregory  pemcln       1351 Jan 21 16:15 Flank.php
+-rw-r--r--   1 gregory  pemcln        275 Jan 21 16:15 Inline.php
+-rw-r--r--   1 gregory  pemcln        460 Jan 21 16:15 Json.php
+-rw-r--r--   1 gregory  pemcln        445 Jan 21 16:15 Out.php
+-rw-r--r--   1 gregory  pemcln        346 Jan 21 16:15 Repeatable.php
+-rw-r--r--   1 gregory  pemcln       5219 Jan 21 16:15 Table.php
+-rw-r--r--   1 gregory  pemcln        552 Jan 21 16:15 Tab.php

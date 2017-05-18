@@ -1,0 +1,65 @@
+home:
+    alias: '/blog'
+    hide_in_urls: true
+
+timezone: 'Europe/Dublin'
+
+gpm:
+    releases: stable
+    method: 'auto'
+    verify_peer: true
+    official_gpm_only: true
+
+languages:
+    supported: [en]
+    include_default_lang: false
+    session_store_active: true
+    http_accept_language: true 
+    override_locale: false
+
+pages:
+    theme: saturn_custom
+    process:
+        markdown: true
+        twig: false
+        markdown:
+            extra: true
+
+cache:
+    enabled: true
+    check:
+        method: file
+    driver: auto
+    prefix: 'g'
+    lifetime: 604800
+    gzip: true
+
+session:
+    enabled: true
+    timeout: 1800
+    name: gk-cookie
+    secure: true 
+    httponly: true
+    split: true
+
+twig:
+    cache: true
+    debug: true
+    auto_reload: true
+    autoescape: false
+
+assets:
+    css_pipeline: true
+    css_pipeline_include_externals: true
+    css_pipeline_before_excludes: true
+    css_minify: true
+    js_pipeline: true
+    js_pipeline_include_externals: true
+    js_pipeline_before_excludes: true
+    js_minify: true
+
+debugger:
+    enabled: false
+    twig: true
+    shutdown:
+        close_connection: true

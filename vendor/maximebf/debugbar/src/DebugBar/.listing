@@ -1,0 +1,16 @@
+drwxr-xr-x   7 gregory  pemcln       4096 Mar 16  2016 .
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
+drwxr-xr-x   4 gregory  pemcln       4096 Mar 16  2016 Bridge
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 DataCollector
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 DataFormatter
+-rw-r--r--   1 gregory  pemcln        305 Jan 21 16:15 DebugBarException.php
+-rw-r--r--   1 gregory  pemcln      12444 Jan 21 16:15 DebugBar.php
+-rw-r--r--   1 gregory  pemcln       1241 Jan 21 16:15 HttpDriverInterface.php
+-rw-r--r--   1 gregory  pemcln      29154 Jan 21 16:15 JavascriptRenderer.php
+-rw-r--r--   1 gregory  pemcln       2872 Jan 21 16:15 OpenHandler.php
+-rw-r--r--   1 gregory  pemcln       1250 Jan 21 16:15 PhpHttpDriver.php
+-rw-r--r--   1 gregory  pemcln        416 Jan 21 16:15 RequestIdGeneratorInterface.php
+-rw-r--r--   1 gregory  pemcln        515 Jan 21 16:15 RequestIdGenerator.php
+drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 Resources
+-rw-r--r--   1 gregory  pemcln       1011 Jan 21 16:15 StandardDebugBar.php
+drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Storage

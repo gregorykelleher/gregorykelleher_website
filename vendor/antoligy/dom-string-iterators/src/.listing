@@ -1,0 +1,4 @@
+drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:14 .
+drwxr-xr-x   3 gregory  pemcln       4096 Jan 21 16:14 ..
+-rw-r--r--   1 gregory  pemcln       3297 Jan 21 16:14 DOMLettersIterator.php
+-rw-r--r--   1 gregory  pemcln       3512 Jan 21 16:14 DOMWordsIterator.php
