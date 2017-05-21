@@ -1,3 +1,18 @@
+# v2.7.0
+## 05/16/2017
+
+1. [](#bugfix)
+    * Fix issue with dynamically added forms (Registration, Profile, Comments, etc) not processed [#149](https://github.com/getgrav/grav-plugin-form/issues/149)
+    * Fixed issue with nested values not being repopulated on form error [#140](https://github.com/getgrav/grav-plugin-form/issues/140)
+
+# v2.6.0
+## 05/04/2017
+
+1. [](#new)
+    * Allow form item replacement in redirect location [#144](https://github.com/getgrav/grav-plugin-form/issues/144)
+1. [](#bugfix)
+    * Fix regression with file uploads introduced in 2.5.0
+
 # v2.5.0
 ## 04/24/2017
 
