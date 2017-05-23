@@ -1,6 +1,6 @@
 ---
 title: Optimising NGINX and Server Security
-date: 18:29 5/18/2017
+date: 22:33 5/06/2017
 author: Gregory Kelleher
 highlight:
 	theme: monokai
@@ -163,7 +163,7 @@ The `X-Xss-Protection` header if set, will enable XSS protection found on Chrome
 
 The last one is decidedly tricky to implement. The CSP or _Content Security Policy_ header is essentially a white-list of approved content sources from either the website itself or from external sources, such as a CDN for example.
 
-Okay, so great idea in practice but it's a finicky thing. It should be a good countermeasure to XSS attacks in practice, but I can't guarantee all the code that runs on my website. For instance, Snap SVG which is an external JavaScript library that I use to animate my SVG illustrations would be prohibited under CSP since it uses `Function()` to dynamically evaluate code in JavaScript.
+Okay, so great idea in theory but it's a finicky thing. It should be a good countermeasure to XSS attacks in practice, but I can't guarantee all the code that runs on my website. For instance, Snap SVG which is an external JavaScript library that I use to animate my SVG illustrations would be prohibited under CSP since it uses `Function()` to dynamically evaluate code in JavaScript.
 
 ![unsafe_eval.png](unsafe_eval.png)
 
