@@ -139,6 +139,14 @@ Session IDs are stored in the session cache just like the session tickets, so ag
 
 Moving on, the next in my configuration is `ssl_stapling` and `ssl_stapling_verify` which enables OCSP stapling for the server. I've added Google's DNS to the Resolver `8.8.8.8 8.8.4.4`.
 
+OCSP or _Online Certificate Status Protocol_ is just a way to check the revocation status of a server certificate. The client makes an OCSP request to the CA to check the status of the certificate and the CA will respond with an OCSP response, indicating whether the certificate is valid or revoked.
+
+OCSP stapling is like the opposite. Instead of the client sending out the OCSP request, the onus is on the server to do the request instead, caching it on the server. Then it will 'staple' this to the certificate and send it to the client. 
+
+Having the server staple the OCSP request takes the burden off the client. This removes the need for the client to do a DNS lookup for the CA as well as the OCSP request itself.
+
+Furthermore, it prevents the CA from discovering the website the client is requesting, since the server is the one sending the handling the OCSP request/response.
+
 And finally we reach the security headers. This is what [securityheaders.io](https://securityheaders.io) will evaluate. 
 
 HSTS or _HTTP Strict Transport Security_ has been enabled, enforcing the use of TLS on web browsers. This will ensure all communications take place over HTTPS on the client-side.

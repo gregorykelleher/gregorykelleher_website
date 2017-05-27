@@ -1,5 +1,5 @@
 ---
-title: Boosting NGINX performance
+title: Boosting NGINX Performance
 date: 18:29 5/18/2017
 author: Gregory Kelleher
 highlight:
