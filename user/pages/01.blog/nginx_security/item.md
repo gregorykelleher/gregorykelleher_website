@@ -157,7 +157,7 @@ The header `Strict-Transport-Security "max-age=63072000; includeSubdomains"` wil
 
 ![preload_chrome.png](preload_chrome.png)
 
-In other words, Chrome will have my website hard-coded in as being accessible over HTTPS only, even in the absence of a HSTS response header. I've added my domain to the Chrome preload list [here](https://hstspreload.org/) where it's still pending submission.
+In other words, Chrome will have my website hard-coded in as being accessible over HTTPS only, even in the absence of a HSTS response header. I've added my domain to the Chrome preload list and you can find it [here](https://hstspreload.org/).
 
 The header `Referrer-Policy "no-referrer"` is an easy one. The referrer header lets me know where an inbound visitor to my website orginated from. Useful perhaps but since I've disabled Google Analytics on my website I know longer care to track users.
 

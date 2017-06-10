@@ -3,13 +3,13 @@ title: Résumé
 menu: Resume
 ---
 
-My name's Gregory Kelleher and I'm an undergrad studying Multimedia, Mobile & Web Development as part of Computer Science at Maynooth University. 
+My name's Gregory Kelleher and I'm an undergrad studying Computer Science at Maynooth University. 
 
 I have a strong interest in IoT, Web development and microprocessor development boards such as the Intel Galileo/Edison. This is often reflected in the work I do and I dedicate my time to building resources around what I accomplish. 
 
 Likewise, I'm always conscious in sharing what I do with the wider community, be it online or teaching classes at CTYI or even every Thursday at CoderDojo. I also maintain a blog that I keep up to date regularly, and post the odd video on my YouTube channel every now and then.
 
-Besides tinkering at things in my own time, I also attend Dublin Maker Faire annually and most recently partook at Science Hack-Day Dublin - winning UCD's Innovation Academy Education Award.
+Besides tinkering with things in my own time, I also attend Dublin Maker Faire annually and most recently partook at Science Hack-Day Dublin - winning UCD's Innovation Academy Education Award.
 
 ---
 <br></br>
@@ -22,7 +22,7 @@ Software Intern for Embedded Software Architecture as part of Quark Solutions Di
 
 **Intel Research & Development Ireland Ltd** • Software Intern • Feb 2017 - Aug 2017
 
-Internship for Strategy and Solutions Engineering Division (SSED) at Intel Leixlip Ireland as part of University 6 month placement programme. Undertaking research and development work.
+Internship for Strategy and Solutions Engineering Division (SSED) at Intel Leixlip Ireland as part of my university 6 month placement programme. Undertaking research and development work into networking security and cryptography.
 
 ---
 <br></br>
@@ -51,7 +51,7 @@ CoderDojo is a a free computer programming club for young people of all ages. I 
 
 **Web Development • Freelancing • Current**
 
-I've designed, built and hosted websites over the past few years for a number of clients. It's a great way for me to polish my skills and learn new ones. I always deliver on mobile-ready performant websites, built to the latest standards. Check out my most recent website for Lyons Café [here](http://www.lyonscafe.com).
+I've designed, built and hosted websites/web-applications over the past few years for a number of clients. It's a great way for me to polish my skills and learn new ones. I always deliver on mobile-ready performant applications, built to the latest standards.
 
 ---
 <br></br>
