@@ -1,2 +1,2 @@
 
-Personal website for [gregorykelleher.com](git config --global commit.gpgsign true)
+Personal website for [gregorykelleher.com](https://gregorykelleher.com)
