@@ -7,7 +7,7 @@ Hi, my name's Gregory Kelleher.
 
 I'm a student currently in my final year of Computer Science at Maynooth University. As such, I inevitably find myself engaged in a range of activities. Whether configuring my web server, tinkering with electronics or dabbling in projects; I'm almost always at the keyboard.
 
-You can get in touch with with me at gregory@gregorykelleher.com
+You can get in touch with with me at <a href="mailto:gregory@gregorykelleher.com">gregory@gregorykelleher.com</a>
 
 #### PGP Key
 
