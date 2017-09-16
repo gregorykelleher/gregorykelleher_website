@@ -29,7 +29,7 @@ Internship for Strategy and Solutions Engineering Division (SSED) at Intel Leixl
 
 ##Education
 
-**Maynooth University** • B.Sc. in Multimedia, Mobile & Web Development • 2014 - 2018
+**Maynooth University** • B.Sc. Computer Science and Software Engineering • 2014 - 2018
 
 **Sligo Grammar School** • Leaving Certificate • 2014 
 
@@ -37,6 +37,7 @@ Internship for Strategy and Solutions Engineering Division (SSED) at Intel Leixl
 <br></br>
 
 ##Recent Work
+
 **Centre of Talented Youth Ireland • Educator • Jan 2016 - March 2016**
 
 I was an Educator at DCU's Centre of Talented Youth Ireland for 3 months teaching a class of 20 students on Gizmos and Gadgets. As part of the class, I taught using Intel Galileos and other IoT development boards, demonstrating how to build complete circuits and create embedded projects.
@@ -77,15 +78,19 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 
 **languages**
 
-Javascript, C, Python, Java, SQL
+Javascript, C, TypeScript, Python, Java, SQL
 
 **Frameworks**
 
-AngularJS, JQuery, Sass, Twig, Grav, OpenOcd, GDB
+AngularJS, Ionic, JQuery, Twig
+
+** Platforms **
+
+Firebase, NGINX, Grav, Yocto
 
 **Tools**
 
-Vim, Bash, Git, Yocto, Emmet
+Vim, Bash, Git, OpenOCD, GDB, GNU Make
 
 **Design & Animation**
 

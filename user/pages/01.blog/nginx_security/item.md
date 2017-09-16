@@ -203,6 +203,8 @@ includeSubDomains';
 
 Again, this is what it looks like. It's a security policy header similar to HSTS or CSP. It provides to the client a cryptographic identity that the client can trust and accept from my website into the future. It's good protection if something happens to my certificate authority, however unlikely that might be.
 
+! I've since disabled HPKP on my website. In truth, I found it inconvenient and more of a hassle to maintain in the long run. I couldn't find a way to automate the renewal on my key pins either. Scott Helme wrote a good article [here](https://scotthelme.co.uk/im-giving-up-on-hpkp/) where he describes the drawbacks I also encountered.
+
 Of course the client has to have an initial connection with the server to receive this cryptographic identity in the first place. Once the client receives this, it will cache it and use it for future connections.
 
 What is this cryptographic identity then? It's simply a fingerprint of the current certificate in use by the server. And because it's always a good idea to have backups, I've taken a fingerprint of a CSR or _certificate signing request_ in case things go wrong.
