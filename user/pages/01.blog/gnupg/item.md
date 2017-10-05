@@ -286,4 +286,9 @@ You can claim ownership of your online accounts and that becomes part of your Ke
 
 Keybase allows you to securely chat and share files with your connections on its platform with end-to-end encryption using PGP too.
 
+!!! UPDATE: As of yesterday and at this time of writing, Keybase has introduced [Encrypted Git](https://keybase.io/blog/encrypted-git-for-everyone). Think of a private repository on Github, but _privater_. As in, it's fully end-to-end encrypted. 
+!!! What's more, everything is signed too. This makes complete sense since Keybase is setup with your device's private key. Likewise, fetches are cryptographically verified. It's a beautiful and effortless solution that isn't offered anywhere else.
+
+![keybase_git](keybase_git.png)
+
 There's no doubt it's breathing new life into PGP. Into the future I predict this will be the survival of PGP; its integration into services such as Keybase. Public-key cryptography isn't ever going to disappear, but it's clear PGP won't be the future, but likely part of it.
