@@ -29,4 +29,3 @@ My Keybase signature for this domain is [here](https://gregorykelleher.com/.well
 
 Feel free to contact me on my Keybase profile [here](https://keybase.io/gregorykelleher).
 
-THIS IS A TEST
