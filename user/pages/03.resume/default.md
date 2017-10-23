@@ -86,6 +86,7 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 + Javascript, TypeScript, SQL, HTML5/SCSS
 + AngularJS, Ionic, Firebase, Grav CMS
 + NGINX: performance, optimisation config .etc
++ Caddy Web Server
 
 **Embedded**
 
