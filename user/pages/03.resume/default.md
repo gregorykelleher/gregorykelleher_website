@@ -97,11 +97,11 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 
 **Tools**
 
-Git, Gerrit, Vim, Bash, GNU/Linux, GPG, DigitalOcean
++ Git, Gerrit, Vim, Bash, GNU/Linux, GPG, DigitalOcean
 
 **Design & Animation**
 
-After Effects, Illustrator, Photoshop, Snap SVG, Actionscript
++ After Effects, Illustrator, Photoshop, Snap SVG, Actionscript
 
 ---
 <br></br>
