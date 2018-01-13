@@ -10,6 +10,8 @@ taxonomy:
 
 Given it's the start to a new year and I haven't written much in the last few months, I thought I'd post a short update on just a few things I've done in the last while.
 
+![new_year](new_year.svg)
+
 ===
 
 ### Switching to Caddy
@@ -135,6 +137,6 @@ The image above is displaying the network traffic (incoming and outgoing) being 
 
 So that pretty much concludes some of the small tweaks I've made to my site in the past few months. I've been quite busy with coursework and job hunting as of late, hence my lack of attention with respect to my blog.
 
-Lastly on a personal note, my cat passed away this week. He was an exotic shorthair cat named Sheerbliss Augustus Fergus Kelleher or 'Gus' for short. He will be sadly missed.
+Lastly on a personal note, my cat passed away this week. He was a pedigree exotic shorthair cat named Sheerbliss Augustus Fergus Kelleher or 'Gus' for short. He will be sadly missed.
 
 ![cat.jpg](cat.jpg)
