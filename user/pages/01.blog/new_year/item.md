@@ -20,6 +20,8 @@ This is possibly the biggest change I've made to how I host my website, and real
 
 [Caddy](https://caddyserver.com/) comes with the tag-line, _"Every site on HTTPS"_ and they thoroughly live up to that aim. In fact, it's automatic. Caddy is bundled as a single executable (that can be customised as much as you want) and downloaded directly onto your VPS.
 
+![caddy.png](caddy.png)
+
 So no dependencies or awkward installs, and you're almost finished before you've begun! After downloading, it's just a matter of configuring the `Caddyfile` which couldn't be simpler. The syntax is perfect in its clarity, check out just how simple it can be:
 
 ```bash
