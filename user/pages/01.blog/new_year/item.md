@@ -68,7 +68,7 @@ And what about the security of that one-line TLS configuration anyways? It's goo
 
 I've noticed I used _"by default"_ more than once, but that's how it really is. Usually the best option is the default. Caddy has excelled in delivering a service that balances convenience with optimum security standards.
 
-In the course of writing this post I also discovered I hadn't been minifying the resources I was serving from my Caddy server. Of course, the Caddyfile syntax for this is as straightforward as the following:
+In the course of writing this post I also discovered I hadn't been minifying the resources I was serving from my Caddy server. Of course, the Caddyfile syntax for this is as straightforward as:
 
 ```
 #minify
@@ -134,6 +134,34 @@ Datadog is a monitoring service for larger cloud-based web applications, tying t
 To be frank, I'm sorely underusing it and haven't had the chance to explore its full capabilities. From what I've read and learnt online, it's a very popular service so I suppose it helps to have had some exposure to it.
 
 The image above is displaying the network traffic (incoming and outgoing) being tracked to my server.
+
+### Pi-Hole
+
+[Pi-hole](https://pi-hole.net/) describes itself as a _black hole for internet advertisements_ on your network. Essentially it maintains a blocklist of IP addresses known to host advertisements and malware (108,807 unique addresses on my last count) and then drops the bad requests before they reach your devices.
+
+![pi_hole.png](pi_hole.png)
+
+It runs as a shell-script on your Raspberry Pi which acts as a DNS server, `46.7.58.3` in my case, for your devices to connect through. So it's more or less a _network-wide_ ad-blocker, removing the need to configure individual clients.
+
+![pi_hole_dashboard.png](pi_hole_dashboard.png)
+
+In a lot of ways, it's better than a traditional ad-blocker considering it blocks ads _before_ they reach any of your devices. And also devices such as game consoles, smart TVs .etc that can't install extensions too easily.
+
+Other benefits they mention include improved overall network performance, since ads are blocked before they're downloaded and also reduced cellular data consumption for smartphones.
+
+The installation was also very easy, only requiring a single bash command:
+
+```
+curl -sSL https://install.pi-hole.net | bash` to setup.
+```
+
+In my view, one of its best features is the web UI interface it comes with, allowing you to monitor and track traffic flowing through the Raspberry Pi. It's accessible on:
+
+```
+http://ip_of_pi_hole/admin
+``` 
+
+That's the most of it. Lastly, to check if it's configured correctly they provide this [page](https://pi-hole.net/pages-to-test-ad-blocking-performance/) for testing purposes.
 
 ### Conclusion
 
