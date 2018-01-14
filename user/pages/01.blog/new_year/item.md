@@ -149,10 +149,10 @@ In a lot of ways, it's better than a traditional ad-blocker considering it block
 
 Other benefits they mention include improved overall network performance, since ads are blocked before they're downloaded and also reduced cellular data consumption for smartphones.
 
-The installation was also very easy, only requiring a single bash command:
+The installation was also very easy, only requiring a single command:
 
 ```
-curl -sSL https://install.pi-hole.net | bash` to setup.
+curl -sSL https://install.pi-hole.net | bash
 ```
 
 In my view, one of its best features is the web UI interface it comes with, allowing you to monitor and track traffic flowing through the Raspberry Pi. It's accessible on:
