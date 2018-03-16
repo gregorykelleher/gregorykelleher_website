@@ -44,15 +44,15 @@ Class Educator leading a class of 20 students for 3 months. Taught electronics a
 
 Designed and delivered on my own course-work, including practical experiments building electronic circuits and creating embedded projects. My notes and slides can be found on my website [here](https://gregorykelleher.com/gizmos_and_gadgets).
 
-**Centre of Talented Youth Ireland • Educator • Jan 2016 - March 2017**
+**Centre of Talented Youth Ireland • Educator • Jan 2017 - March 2017**
 
 Granted to be an Educator at DCU's Centre of Talented Youth Ireland again for a further 3 months. The course is based upon teaching students computer gaming using GameMaker software and tools.
 
-**CoderDojo Ireland • Demonstrator • Sept 2015 - Current**
+**CoderDojo Ireland • Demonstrator • Sept 2015 - May 2017**
 
 CoderDojo is a free computer programming club for young people of all ages. I volunteer each Thursday in my local Dojo at Maynooth University.
 
-**Web Development • Freelancing • Current**
+**Web Development • Freelancing • Previously**
 
 I've often done freelance work to develop and build progressive web applications and websites for clients through the years. Taking on side projects has enabled me to further build upon my technical skills, as well as providing an avenue for me to experiment with new technologies.
 
