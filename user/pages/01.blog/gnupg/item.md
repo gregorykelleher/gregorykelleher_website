@@ -19,7 +19,7 @@ PGP is an old, if not venerable piece of software dating back to the early 90’
 * Confidentiality
 * Non-Repudiation
 
-These principles derive from the well-known CIA Triad of Confidentiality, Integrity and Availability. Not to be confused with the Central Intelligence Agency, CIA. Yet from my own reading, I've found the previous four principles to be more prevalent. 
+These principles derive from the well-known CIA Triad of Confidentiality, Integrity and Availability. Not to be confused with the Central Intelligence Agency, CIA. Yet from my own reading, I've found the previous four principles to be just as prevalent. 
 
 But before diving into PGP, it's wise to pause and consider the desired end goal. Summed up in a word, it's privacy. Pretty Good Privacy in fact. Hence the name. 
 
@@ -65,7 +65,7 @@ On that point, it's wise to bring up the matter of semantics and the issue of pr
 
 The intertwined relationship of the two is difficult to separate. In simple terms, the definition of secrecy is what we know onto ourselves. Privacy enables us to keep what's secret, secret.
 
-The two are not synonymous but are aligned. The subtle distinction or overlap between the two lends the popular phrase:
+The two are not synonymous but are aligned. The subtle distinction or overlap between the two lends the popular adage:
 
 > “when I withhold information, it's privacy; when you withhold information, it's secrecy”.
 
@@ -119,7 +119,7 @@ The private key must be kept ultimately secure. Whereas the public key allows ot
 
 So how do you secure your private key? It helps to be a little paranoid here. Typically, the user would generate their key-chain on their laptop and leave it at that. Unless the private key is protected with a pass-phrase, it's sitting on the laptop in the clear.
 
-So protecting your key-chain is tied to how well you protect your laptop. For example, if your laptop were stolen by someone ‘tech-savvy’ enough, the thief would have full access to your GnuPG key-chain. They could steal your identity, impersonate and decrypt anything past or present. Essentially it's the coup de grâce for your key-chain.
+So protecting your key-chain is tied to how well you protect your laptop. For example, if your laptop were stolen by someone ‘tech-savvy’ enough, the thief would have full access to your GnuPG key-chain. They could steal your identity, impersonate and decrypt anything past or present. Essentially it's the _coup de grâce_ for your key-chain.
 
 The answer to this obstacle is not having your private key on your laptop at all. GnuPG allows you to create sub-keys, special keys derived from your master key. It mitigates some of the risk but won't prevent someone from decrypting your data if they have the right sub-key.
 

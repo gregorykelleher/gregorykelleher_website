@@ -68,7 +68,7 @@ And what about the security of that one-line TLS configuration anyways? It's goo
 
 I've noticed I used _"by default"_ more than once, but that's how it really is. Usually the best option is the default. Caddy has excelled in delivering a service that balances convenience with optimum security standards.
 
-In the course of writing this post I also discovered I hadn't been minifying the resources I was serving from my Caddy server. Of course, the Caddyfile syntax for this is as straightforward as:
+In the course of writing this post I also discovered Caddy has an option for minifying resources too. Of course, the Caddyfile syntax for this is as straightforward as:
 
 ```
 #minify
