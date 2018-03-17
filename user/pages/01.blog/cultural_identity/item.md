@@ -1,6 +1,6 @@
 ---
 title: Cultural Identity Essay
-date: 19:36 3/16/2018
+date: 19:36 2/6/2018
 taxonomy:
     category: blog
     tag: [Essay, College, Culture]
@@ -55,7 +55,7 @@ From a historical perspective, this is a routine narrative that foreshadows almo
 
 And neither does their frequent occurrence show any signs of abating, where _‘since the end of the cold war ethno-cultural conflicts have become the most common source of political violence’._ (Kymlicka, 1996).
 
-In fact, the term _‘balkanisation’_ has come to describe the process of fragmentation of a state into smaller regions (centred on a shared cultural identity) that are uncooperative or openly hostile with each other. (Wiktionary, n.d.)
+In fact, the term _‘balkanisation’_ has come to describe the process of fragmentation of a state into smaller regions (centred on a shared cultural identity) that are uncooperative or openly hostile with each other (Wiktionary, n.d.).
 
 It must be noted that these historical events aren’t simply foreign matters or unrepresentative of our own advanced societies, but that we too, in modern liberal democracies are subject to the same prejudice at home. 
 
@@ -83,7 +83,7 @@ It is this concept that heralds American exceptionalism. Its cultural flexibilit
 
 Yet the USA’s greatest strength can also be revealed as its greatest weakness. Fundamental social issues, growing inequality, political polarisation and the marginalisation of cultural groups has stressed every fibre of American society.
 
-In the aftermath of the US political election, this disquietude of the status quo was exposed in the form of a protest vote. A reckless vote showing little basis in fact or any due prudence, a populist reaction to turmoil through the election of a shameless demagogue, in turn proving that, _‘People can behave foolishly, recklessly, self-destructively in the aggregate just as they can individually’ (Remnick, 2016)._
+In the aftermath of the US political election, this disquietude of the status quo was exposed in the form of a protest vote. A reckless vote showing little basis in fact or any due prudence, a populist reaction to turmoil through the election of a shameless demagogue, in turn proving that, _‘People can behave foolishly, recklessly, self-destructively in the aggregate just as they can individually’_ (Remnick, 2016).
 
 Therein lies the question, how did an individual so misaligned and (disputably) racist come to represent the diversity of the American people, as head of state? It’s completely contradictory to our established definition for a representative democracy and goes against core American values. 
 
@@ -122,8 +122,7 @@ The onus is on us, the individual, to recognise our own cultural identity, reali
 ### References
 
 Wiktionary (2016) [online]
-Available at:
-https://en.wiktionary.org/wiki/Balkanization#English
+Available [here](https://en.wiktionary.org/wiki/Balkanization#English)
 (accessed 19 December 2016)
 
 Kymlicka, W. (2016) _‘Multicultural Citizenship: A Liberal Theory of Minority Rights’_ Oxford University Press Inc., New York.
@@ -137,13 +136,11 @@ Léopold, B. (1959) Reader's Digest, October 1959. New York.
 Remnick, D. (2016) ‘And American Tragedy’.
 New Yorker [online]
 9 November 2016.
-Available at:
-http://www.newyorker.com/news/news-desk/an-american-tragedy-2
+Available [here](http://www.newyorker.com/news/news-desk/an-american-tragedy-2)
 (accessed 19 December 2016)
 
 Oxford Dictionary (2016) [online]
-Available at:
-https://www.oxforddictionaries.com/press/news/2016/11/17/WOTY-16
+Available [here](https://www.oxforddictionaries.com/press/news/2016/11/17/WOTY-16)
 (accessed 19 December 2016)
 
 <br></br>
