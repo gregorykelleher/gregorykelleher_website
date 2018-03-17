@@ -10,9 +10,6 @@
 	.st4{fill:#DBA753;}
 	.st5{fill:#4D9BDB;}
 	.st6{fill:#7B0099;}
-	.st7{font-family:'Yahoo';}
-	.st8{font-size:60.4467px;}
-	.st9{font-size:100.2207px;}
 </style>
 <g id="Layer_2">
 	<rect x="-0.6" y="0.6" class="st0" width="620" height="300"/>
@@ -73,8 +70,13 @@
 	</g>
 	<g>
 		<polygon class="st6" points="374.2,106.7 381.9,201.6 474.3,182.9 477.1,88.8 		"/>
-		<text transform="matrix(1 0 0 1 389.439 169.4909)" class="st1 st7 st8">Y</text>
-		<text transform="matrix(1 0 0 1 481.6851 159.2797)" class="st6 st7 st9">!</text>
+		<g>
+			<path class="st1" d="M410.5,126.6l15.2,18.7l14.8-12.6l-11.4-0.4v-4.8l30.5-0.5v5.7l-10.5,0.8l-20.1,17.9l-0.4,13.9l11.8,0.4v4.4
+				h-36.1v-4.4l11.7-0.8v-13.1l-20.9-25.3l-10.9-0.8V121h36.6l-0.5,4.8L410.5,126.6z"/>
+		</g>
+		<g>
+			<path class="st6" d="M490.2,152.7l17.6,1.4v13.5h-16.2L490.2,152.7z M506.4,144.5l-13.5-1.3l1.4-67.6l28.4,1.4L506.4,144.5z"/>
+		</g>
 	</g>
 </g>
 </svg>

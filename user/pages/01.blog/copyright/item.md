@@ -1,5 +1,5 @@
 ---
-title: Effects of Convergence
+title: Effects of Convergence Essay
 date: 13:06 3/17/2018
 taxonomy:
     category: blog
