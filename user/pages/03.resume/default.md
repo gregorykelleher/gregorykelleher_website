@@ -3,24 +3,40 @@ title: Résumé
 menu: Résumé
 ---
 
-My name's Gregory Kelleher and I'm an undergraduate, currently in my final year at Maynooth University. My interests lie across web development and embedded systems - the world of IoT.
+My name's Gregory Kelleher and I'm a recent graduate of Maynooth University. I have a strong passion for technology, especially with respect to Embedded Systems and IoT.
 
-This is most evident in my two recent internships at Intel R&D where I worked as part of the IoT Group for a combined total of 10 months. Outside of Intel, I maintain a website hosted on my own VPS, where I blog on what I'm doing. I also freelance, developing many websites and prototypes for clients over the last four years, most of which are hosted on my server too.
+This is most evident from my two recent internships at Intel R&D, and most recently, in my current employment at Jaguar Land Rover.
 
-Education is a personal motivation and is visible in my volunteer work at CoderDojo as well as my time as a class instructor for CTY Ireland. I've also presented at Dublin Maker Faire with my university and more recently attended the Workday Intervarsity Hack-a-thon.
+Working as an embedded software engineer with both companies has enabled me to demonstrate and build upon my technical skills as well as offering me a valuable opportunity to work and collaborate with experts in the field; within a professional environment.
+
+Outside of work, my interests in technology extend from electronics to web development. I enjoy tinkering with pet projects, and in my own time, I maintain an up-to-date website on my own VPS where I occasionally blog on what I'm doing.
+
+My experience not only lies with Embedded Systems, but I also have a strong background in Web Development. I've freelanced and developed many progressive websites/applications and prototypes for a number of clients over the last few years and still continue this at present.
+
+Lastly, education is a personal motivation and I strive to encourage other individuals to pursue an interest in the field. This is visible in my volunteer work at CoderDojo, my time as a class instructor for CTY Ireland, and my educational YouTube channel. I've also presented at Dublin Maker Faire with my university and attended Intervarsity Hack-a-thons to promote the field of technology.
 
 ---
 <br></br>
 
-##Internships
+##Experience
 
-**Intel Research & Development Ireland Ltd** • Software Intern • Feb 2017 - Aug 2017
+**Jaguar Land Rover Ltd** 
+
+_Graduate Automotive Software Engineer • August 2018 - Current_
+
+Employed at Jaguar Land Rover R&D in Shannon, Ireland. Working in an embedded software engineer role as part of vehicle engineering.
+
+**Intel Research & Development Ireland Ltd**
+
+_Software Engineer Intern • Feb 2017 - Aug 2017_
 
 Intern working as part of the Strategy and Solutions Engineering Division (SSED). Conducted study into the role for Information Security in relation to IoT. Special focus into Direct Anonymous Attestation (DAA) algorithms, as well as cryptographic protocols such as TLS/SSL.
 
 Familiarity with OpenSSL and implementing TLS/SSL best practices, e.g. HSTS, HPKP, ECDHE, HTTP/2, OCSP stapling, forward secrecy .etc
 
-**Intel Research & Development Ireland Ltd** • Software Intern • May 2016 - Sept 2016
+**Intel Research & Development Ireland Ltd** 
+
+_Software Engineer Intern • May 2016 - Sept 2016_
 
 Summer internship working with embedded systems and micro-controllers as part of Quark Solutions Division (QSD). Built proficiency in C with GNU toolchain, alongside debugging tools such as GDB and OpenOCD, as well as VCS (Git and Gerrit).
 
@@ -29,7 +45,7 @@ Summer internship working with embedded systems and micro-controllers as part of
 
 ##Education
 
-**Maynooth University** • B.Sc. Computer Science and Software Engineering • 2014 - 2018 • 1st Class Honours (3rd Year)
+**Maynooth University** • B.Sc. Computer Science and Software Engineering • 2014 - 2018
 
 **Sligo Grammar School** • Leaving Certificate • 2014 
 
@@ -83,8 +99,8 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 
 **Web**
 
-+ Javascript, TypeScript, SQL, HTML5/SCSS
-+ AngularJS, Ionic, Firebase, Grav CMS
++ Javascript, SQL, HTML5/SCSS
++ AngularJS, Firebase, Grav CMS
 + NGINX: performance, optimisation config .etc
 + Caddy Web Server
 

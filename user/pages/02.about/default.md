@@ -5,7 +5,7 @@ route: about
 
 Hi, my name's Gregory Kelleher. 
 
-I'm a student currently in my final year of Computer Science at Maynooth University. As such, I inevitably find myself engaged in a range of activities. Whether configuring my web server, tinkering with electronics or dabbling in projects; I'm almost always at the keyboard.
+I'm a recent graduate of Computer Science and Software Engineering at Maynooth University. I enjoy learning and discovering all things 'tech', and as such, I inevitably find myself engaged in a range of activities. Whether configuring my web server, tinkering with electronics or dabbling in projects; I'm almost always at the keyboard.
 
 You can get in touch with with me at <a href="mailto:gregory@gregorykelleher.com">gregory@gregorykelleher.com</a>
 
