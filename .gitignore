@@ -13,3 +13,4 @@ Thumbs.db
 
 #custom
 sftp-config.json
+logs/*

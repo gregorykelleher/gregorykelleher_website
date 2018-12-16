@@ -69,10 +69,16 @@ a { font-family: "Open Sans", sans-serif }
     }
 }
 
+@font-face {
+    font-family: "Bunchló";
+    font-style: normal;
+    src: url("../fonts/bunchlo.woff") format('woff');
+}
 
 p.p-intro {
     color: #E85F37;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Bunchló";
+    /*font-family: "Open Sans", sans-serif;*/
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 700;
