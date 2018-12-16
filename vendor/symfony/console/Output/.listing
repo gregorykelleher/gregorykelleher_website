@@ -1,9 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln        872 Jan 21 16:16 BufferedOutput.php
--rw-r--r--   1 gregory  pemcln        843 Jan 21 16:16 ConsoleOutputInterface.php
--rw-r--r--   1 gregory  pemcln       4000 Jan 21 16:16 ConsoleOutput.php
--rw-r--r--   1 gregory  pemcln       2158 Jan 21 16:16 NullOutput.php
--rw-r--r--   1 gregory  pemcln       2677 Jan 21 16:16 OutputInterface.php
--rw-r--r--   1 gregory  pemcln       4502 Jan 21 16:16 Output.php
--rw-r--r--   1 gregory  pemcln       3346 Jan 21 16:16 StreamOutput.php

@@ -1,6 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:16 .
-drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:16 ..
--rw-r--r--   1 gregory  pemcln       7370 Jan 21 16:16 ClassNotFoundFatalErrorHandler.php
--rw-r--r--   1 gregory  pemcln        959 Jan 21 16:16 FatalErrorHandlerInterface.php
--rw-r--r--   1 gregory  pemcln       3061 Jan 21 16:16 UndefinedFunctionFatalErrorHandler.php
--rw-r--r--   1 gregory  pemcln       1854 Jan 21 16:16 UndefinedMethodFatalErrorHandler.php

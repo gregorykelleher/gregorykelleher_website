@@ -1,7 +1,0 @@
-drwxr-xr-x   3 gregory  pemcln       4096 Jan 21 16:17 .
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln      42673 Jan 21 16:17 CHANGELOG
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 lib
--rw-r--r--   1 gregory  pemcln       1497 Jan 21 16:17 LICENSE
--rw-r--r--   1 gregory  pemcln        479 Jan 21 16:17 .php_cs.dist
--rw-r--r--   1 gregory  pemcln        486 Jan 21 16:17 README.rst

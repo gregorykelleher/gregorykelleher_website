@@ -1,5 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln      20490 Jan 21 16:16 Command.php
--rw-r--r--   1 gregory  pemcln       2837 Jan 21 16:16 HelpCommand.php
--rw-r--r--   1 gregory  pemcln       2927 Jan 21 16:16 ListCommand.php

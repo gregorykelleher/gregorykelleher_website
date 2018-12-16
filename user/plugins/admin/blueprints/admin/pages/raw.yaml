@@ -18,6 +18,9 @@ form:
           title: PLUGIN_ADMIN.CONTENT
 
           fields:
+            xss_check:
+              type: xss
+              
             frontmatter:
               classes: frontmatter
               type: editor
@@ -36,7 +39,7 @@ form:
             content:
               type: markdown
 
-            uploads:
+            header.media_order:
               type: pagemedia
               label: PLUGIN_ADMIN.PAGE_MEDIA
 
@@ -87,7 +90,7 @@ form:
                       label: PLUGIN_ADMIN.DISPLAY_TEMPLATE
                       help: PLUGIN_ADMIN.DISPLAY_TEMPLATE_HELP
                       default: default
-                      data-options@: '\Grav\Common\Page\Pages::types'
+                      data-options@: '\Grav\Plugin\AdminPlugin::pagesTypes'
                       validate:
                         required: true
 

@@ -1,8 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:17 .
-drwxr-xr-x  15 gregory  pemcln       4096 Apr  9 21:57 ..
--rw-r--r--   1 gregory  pemcln        778 Jan 21 16:17 Caddyfile
--rw-r--r--   1 gregory  pemcln        808 Jan 21 16:17 Caddyfile-0.8.x
--rw-r--r--   1 gregory  pemcln       3033 Jan 21 16:17 htaccess.txt
--rw-r--r--   1 gregory  pemcln       1853 Jan 21 16:17 lighttpd.conf
--rw-r--r--   1 gregory  pemcln       1443 Jan 21 16:17 nginx.conf
--rw-r--r--   1 gregory  pemcln       2148 Jan 21 16:17 web.config

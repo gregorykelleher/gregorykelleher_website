@@ -1,6 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   7 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       5253 Jan 21 16:17 AbstractDumper.php
--rw-r--r--   1 gregory  pemcln      15869 Jan 21 16:17 CliDumper.php
--rw-r--r--   1 gregory  pemcln        595 Jan 21 16:17 DataDumperInterface.php
--rw-r--r--   1 gregory  pemcln      13729 Jan 21 16:17 HtmlDumper.php

@@ -28,11 +28,11 @@ function parse_user_agent( $u_agent = null ) {
 	if( !$u_agent ) return $empty;
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
-		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'CrOS', 'X11' );
+		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
 
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
-				TizenBrowser|Chrome|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|Puffin|SamsungBrowser|
+				TizenBrowser|(?:Headless)?Chrome|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|Puffin|SamsungBrowser|
 				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 				Valve\ Steam\ Tenfoot|
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
@@ -133,7 +133,7 @@ function parse_user_agent( $u_agent = null ) {
 				}
 			}
 		}
-	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser) ) {
+	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $rv_result && $find('Trident', $key) ) {
 		$browser = 'MSIE';
@@ -145,7 +145,8 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( $platform == 'Android' && !($key = 0) ) {
+		if( $platform == 'Android' ) {
+			// $key = 0;
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';

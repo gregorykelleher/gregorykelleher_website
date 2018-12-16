@@ -1,5 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  17 gregory  pemcln       4096 Jan 21 16:11 ..
--rw-r--r--   1 gregory  pemcln       1464 Jan 21 16:11 Authentication.php
--rw-r--r--   1 gregory  pemcln       3573 Jan 21 16:11 Group.php
--rw-r--r--   1 gregory  pemcln       6746 Jan 21 16:11 User.php

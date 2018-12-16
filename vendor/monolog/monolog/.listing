@@ -1,8 +1,0 @@
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln      18627 Jan 21 16:15 CHANGELOG.mdown
--rw-r--r--   1 gregory  pemcln         80 Mar 16  2016 .gitattributes
--rw-r--r--   1 gregory  pemcln       1063 Jan 21 16:15 LICENSE
--rw-r--r--   1 gregory  pemcln       1868 Jan 21 16:15 .php_cs
--rw-r--r--   1 gregory  pemcln       4047 Jan 21 16:15 README.mdown
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 src

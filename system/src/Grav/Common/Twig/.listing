@@ -1,6 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  17 gregory  pemcln       4096 Jan 21 16:11 ..
--rw-r--r--   1 gregory  pemcln        298 Jan 21 16:11 TwigEnvironment.php
--rw-r--r--   1 gregory  pemcln      23978 Jan 21 16:11 TwigExtension.php
--rw-r--r--   1 gregory  pemcln      12762 Jan 21 16:11 Twig.php
--rw-r--r--   1 gregory  pemcln       1089 Jan 21 16:11 WriteCacheFileTrait.php

@@ -1,5 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   4 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln        803 Jan 21 16:16 TraceableEventDispatcherInterface.php
--rw-r--r--   1 gregory  pemcln      11441 Jan 21 16:16 TraceableEventDispatcher.php
--rw-r--r--   1 gregory  pemcln       1749 Jan 21 16:16 WrappedListener.php

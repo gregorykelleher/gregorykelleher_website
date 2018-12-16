@@ -1,8 +1,0 @@
-drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:15 .
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Exception
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 Handler
-drwxr-xr-x   5 gregory  pemcln       4096 Mar 16  2016 Resources
--rw-r--r--   1 gregory  pemcln       3399 Jan 21 16:15 RunInterface.php
--rw-r--r--   1 gregory  pemcln      12186 Jan 21 16:15 Run.php
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 Util

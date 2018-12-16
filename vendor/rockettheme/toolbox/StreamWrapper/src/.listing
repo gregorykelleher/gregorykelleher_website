@@ -1,6 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       2229 Jan 21 16:16 ReadOnlyStream.php
--rw-r--r--   1 gregory  pemcln       1982 Jan 21 16:16 StreamBuilder.php
--rw-r--r--   1 gregory  pemcln       8018 Jan 21 16:16 StreamInterface.php
--rw-r--r--   1 gregory  pemcln       5331 Jan 21 16:16 Stream.php

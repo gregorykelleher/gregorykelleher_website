@@ -1,7 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       1629 Jan 21 16:16 OutputFormatterInterface.php
--rw-r--r--   1 gregory  pemcln       7018 Jan 21 16:16 OutputFormatter.php
--rw-r--r--   1 gregory  pemcln       1371 Jan 21 16:16 OutputFormatterStyleInterface.php
--rw-r--r--   1 gregory  pemcln       6848 Jan 21 16:16 OutputFormatterStyle.php
--rw-r--r--   1 gregory  pemcln       2834 Jan 21 16:16 OutputFormatterStyleStack.php

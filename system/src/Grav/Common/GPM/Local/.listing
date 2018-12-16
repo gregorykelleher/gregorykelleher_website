@@ -1,7 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   5 gregory  pemcln       4096 Jan 21 16:11 ..
--rw-r--r--   1 gregory  pemcln        575 Jan 21 16:11 AbstractPackageCollection.php
--rw-r--r--   1 gregory  pemcln       1093 Jan 21 16:11 Package.php
--rw-r--r--   1 gregory  pemcln        502 Jan 21 16:11 Packages.php
--rw-r--r--   1 gregory  pemcln        604 Jan 21 16:11 Plugins.php
--rw-r--r--   1 gregory  pemcln        521 Jan 21 16:11 Themes.php

@@ -1,5 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       2352 Jan 21 16:16 OutputStyle.php
--rw-r--r--   1 gregory  pemcln       3253 Jan 21 16:16 StyleInterface.php
--rw-r--r--   1 gregory  pemcln      12178 Jan 21 16:16 SymfonyStyle.php

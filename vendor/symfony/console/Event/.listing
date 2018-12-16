@@ -1,6 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x  14 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       1341 Jan 21 16:16 ConsoleCommandEvent.php
--rw-r--r--   1 gregory  pemcln       1464 Jan 21 16:16 ConsoleEvent.php
--rw-r--r--   1 gregory  pemcln       1597 Jan 21 16:16 ConsoleExceptionEvent.php
--rw-r--r--   1 gregory  pemcln       1306 Jan 21 16:16 ConsoleTerminateEvent.php

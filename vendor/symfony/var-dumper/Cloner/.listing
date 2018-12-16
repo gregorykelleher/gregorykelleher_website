@@ -1,9 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   7 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln      14469 Jan 21 16:17 AbstractCloner.php
--rw-r--r--   1 gregory  pemcln        572 Jan 21 16:17 ClonerInterface.php
--rw-r--r--   1 gregory  pemcln        996 Jan 21 16:17 Cursor.php
--rw-r--r--   1 gregory  pemcln       8388 Jan 21 16:17 Data.php
--rw-r--r--   1 gregory  pemcln       2008 Jan 21 16:17 DumperInterface.php
--rw-r--r--   1 gregory  pemcln        885 Jan 21 16:17 Stub.php
--rw-r--r--   1 gregory  pemcln      14495 Jan 21 16:17 VarCloner.php

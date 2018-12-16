@@ -1,8 +1,0 @@
-drwxr-xr-x   5 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   3 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       7852 Jan 21 16:15 ErrorHandler.php
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 Formatter
-drwxr-xr-x   6 gregory  pemcln       4096 Jan 21 16:16 Handler
--rw-r--r--   1 gregory  pemcln      19304 Jan 21 16:16 Logger.php
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:16 Processor
--rw-r--r--   1 gregory  pemcln       4024 Jan 21 16:16 Registry.php

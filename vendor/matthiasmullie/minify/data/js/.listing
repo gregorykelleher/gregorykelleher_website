@@ -1,8 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Jan 21 16:15 .
-drwxr-xr-x   3 gregory  pemcln       4096 Jan 21 16:15 ..
--rw-r--r--   1 gregory  pemcln         57 Jan 21 16:15 keywords_after.txt
--rw-r--r--   1 gregory  pemcln        176 Jan 21 16:15 keywords_before.txt
--rw-r--r--   1 gregory  pemcln        414 Jan 21 16:15 keywords_reserved.txt
--rw-r--r--   1 gregory  pemcln        116 Jan 21 16:15 operators_after.txt
--rw-r--r--   1 gregory  pemcln        115 Jan 21 16:15 operators_before.txt
--rw-r--r--   1 gregory  pemcln        120 Jan 21 16:15 operators.txt

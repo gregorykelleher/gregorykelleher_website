@@ -1,8 +1,0 @@
-drwxr-xr-x   2 gregory  pemcln       4096 Mar 16  2016 .
-drwxr-xr-x   8 gregory  pemcln       4096 Mar 16  2016 ..
--rw-r--r--   1 gregory  pemcln       2746 Mar 16  2016 APC.php
--rw-r--r--   1 gregory  pemcln       4929 Mar 16  2016 File.php
--rw-r--r--   1 gregory  pemcln       3110 Mar 16  2016 Memcache.php
--rw-r--r--   1 gregory  pemcln       2927 Mar 16  2016 WinCache.php
--rw-r--r--   1 gregory  pemcln       2801 Mar 16  2016 XCache.php
--rw-r--r--   1 gregory  pemcln       2765 Mar 16  2016 ZendPlatform.php
