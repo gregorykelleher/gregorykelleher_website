@@ -2,7 +2,6 @@
 .sass-cache
 composer.lock
 cache/*
-images/*
 assets/*
 
 # OS Generated
@@ -14,4 +13,3 @@ Thumbs.db
 
 #custom
 sftp-config.json
-logs/
