@@ -1,5 +1,3 @@
 Contact: gregory@gregorykelleher.com
 Contact: https://keybase.io/gregorykelleher
 Encryption: https://gregorykelleher.com/.well-known/public_key.txt
-
-web hook test
