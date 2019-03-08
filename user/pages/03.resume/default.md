@@ -108,8 +108,8 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 + C/C++
 + Yocto Project, QNX, freeRTOS
 + GNU toolchain, CMake, Bitbake
-+ OpenOCD, Clang/LLVM, Google Test, Valgrind, lcov/gcov, cppcheck
-+ NXP K64, BeagleBoard, Intel Galileo, Edison, D2000, C1000 .etc
++ NXP K64, BeagleBoard, Intel Galileo/Edison/D2000/C1000 .etc
++ OpenOCD, Clang/LLVM, Google Test, Valgrind, CppCheck, lcov/gcov
 
 **DevOps**
 
