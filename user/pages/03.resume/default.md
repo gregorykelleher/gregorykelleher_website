@@ -99,25 +99,31 @@ I maintain a [YouTube channel](https://www.youtube.com/user/Spokkam) online wher
 
 **Web**
 
-+ Javascript, SQL, HTML5/SCSS
-+ AngularJS, Firebase, Grav CMS
 + NGINX: performance, optimisation config .etc
-+ Caddy Web Server
++ Caddy Web Server, DigitalOcean
++ SQL, Firebase, Grav CMS
 
 **Embedded**
 
 + C/C++
-+ Intel QMSI, Libmraa
-+ GCC, GDB, GNU Make, OpenOCD
-+ Intel D2000, C1000, Galileo, Edison, Arduino .etc
++ Yocto Project, QNX, freeRTOS
++ GNU toolchain, CMake, Bitbake
++ OpenOCD, Clang/LLVM, Google Test, Valgrind, lcov/gcov, cppcheck
++ NXP K64, BeagleBoard, Intel Galileo, Edison, D2000, C1000 .etc
+
+**DevOps**
+
++ GitLab Runner
++ Docker, Vagrant
++ Packer, Ansible
 
 **Tools**
 
-+ Git, Gerrit, Vim, Bash, GNU/Linux, GPG, DigitalOcean
++ Git, Vim, Bash/Korn, GNU/Linux, GPG
 
 **Design & Animation**
 
-+ After Effects, Illustrator, Photoshop, Snap SVG, Actionscript
++ Illustrator, Photoshop, Snap SVG, Actionscript
 
 ---
 <br></br>
