@@ -116,6 +116,9 @@ header {
 
     # Certificate Transparency Policy Reporting
     Expect-CT "max-age=0, report-uri=\"https://gregory@gregorykelleher.com/.well-known/ct_report\""
+
+    # Caching
+    Cache-Control "max-age=604800, immutable"
 }
 ```
 

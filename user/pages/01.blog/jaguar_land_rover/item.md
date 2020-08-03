@@ -8,7 +8,7 @@ taxonomy:
 
 Just a quick post to mention my new start as a graduate software engineer as part of Vehicle Engineering at Jaguar Land Rover Ltd. 
 
-![jaguar_land_rover_logo](jaguar_land_rover_logo.jpg)
+![jaguar_land_rover](jaguar_land_rover.svg)
 
 ===
 
