@@ -1,15 +1,20 @@
 <?php
+
 /**
  * @package    Grav\Plugin\Login
  *
  * @copyright  Copyright (C) 2014 - 2017 RocketTheme, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
+
 namespace Grav\Plugin\Login\Events;
 
 use Grav\Common\Grav;
 use Grav\Common\Session;
-use Grav\Common\User\User;
+use Grav\Common\User\Interfaces\UserCollectionInterface;
+use Grav\Common\User\Interfaces\UserInterface;
+use Grav\Framework\Session\SessionInterface;
+use Grav\Plugin\Login\Login;
 use RocketTheme\Toolbox\Event\Event;
 
 /**
@@ -21,7 +26,7 @@ use RocketTheme\Toolbox\Event\Event;
  * @property string|string[]    $authorize
  * @property array              $options
  * @property Session            $session
- * @property User               $user
+ * @property UserInterface      $user
  * @property string             $message
  *
  */
@@ -30,37 +35,42 @@ class UserLoginEvent extends Event
     /**
      * Undefined event state.
      */
-    const AUTHENTICATION_UNDEFINED = 0;
+    public const AUTHENTICATION_UNDEFINED = 0;
 
     /**
      * onUserAuthenticate success.
      */
-    const AUTHENTICATION_SUCCESS = 1;
+    public const AUTHENTICATION_SUCCESS = 1;
 
     /**
      * onUserAuthenticate fails on bad username/password.
      */
-    const AUTHENTICATION_FAILURE = 2;
+    public const AUTHENTICATION_FAILURE = 2;
 
     /**
      * onUserAuthenticate fails on auth cancellation.
      */
-    const AUTHENTICATION_CANCELLED = 4;
+    public const AUTHENTICATION_CANCELLED = 4;
 
     /**
      * onUserAuthorizeLogin fails on expired account.
      */
-    const AUTHORIZATION_EXPIRED = 8;
+    public const AUTHORIZATION_EXPIRED = 8;
 
     /**
-     * onUserAuthorizeLogin is delayed until user has performed extra action(s).
+     * onUserAuthorizeLogin is delayed until user has performed AUTHORIZATION_CHALLENGE.
      */
-    const AUTHORIZATION_DELAYED = 16;
+    public const AUTHORIZATION_DELAYED = 16;
 
     /**
      * onUserAuthorizeLogin fails for other reasons.
      */
-    const AUTHORIZATION_DENIED = 32;
+    public const AUTHORIZATION_DENIED = 32;
+
+    /**
+     * onUserAuthorizeLogin was challenged, combine with AUTHENTICATION_SUCCESS, AUTHENTICATION_FAILURE or AUTHENTICATION_CANCELLED.
+     */
+    public const AUTHORIZATION_CHALLENGE = 64;
 
     /**
      * UserLoginEvent constructor.
@@ -87,11 +97,26 @@ class UserLoginEvent extends Event
             $this->offsetSet('session', Grav::instance()['session']);
         }
         if (!$this->offsetExists('user')) {
-            $this->offsetSet('user', User::load($this['credentials']['username']));
+            /** @var UserCollectionInterface $users */
+            $users = Grav::instance()['accounts'];
+            $user = $users->load($this['credentials']['username']);
+            $this->offsetSet('user', $user);
+
+            if (Login::DEBUG) {
+                if ($user->exists()) {
+                    Login::addDebugMessage('Login user:', $user);
+                } else {
+                    Login::addDebugMessage("Login: user '{$this['credentials']['username']}' not found");
+                }
+            }
+
         }
     }
 
-    public function isSuccess()
+    /**
+     * @return bool
+     */
+    public function isSuccess(): bool
     {
         $status = $this->offsetGet('status');
         $failure = static::AUTHENTICATION_FAILURE | static::AUTHENTICATION_CANCELLED | static::AUTHORIZATION_EXPIRED
@@ -100,15 +125,28 @@ class UserLoginEvent extends Event
         return ($status & static::AUTHENTICATION_SUCCESS) && !($status & $failure);
     }
 
-    public function isDelayed()
+    /**
+     * @return bool
+     */
+    public function isDelayed(): bool
     {
         return $this->isSuccess() && ($this->offsetGet('status') & static::AUTHORIZATION_DELAYED);
     }
 
     /**
+     * @return bool
+     */
+    public function isChallenged(): bool
+    {
+        $status = $this->offsetGet('status');
+
+        return (bool)($status & static::AUTHORIZATION_CHALLENGE);
+    }
+
+    /**
      * @return int
      */
-    public function getStatus()
+    public function getStatus(): int
     {
         return (int)$this->offsetGet('status');
     }
@@ -117,7 +155,7 @@ class UserLoginEvent extends Event
      * @param int $status
      * @return $this
      */
-    public function setStatus($status)
+    public function setStatus($status): self
     {
         $this->offsetSet('status', $this->offsetGet('status') | (int)$status);
 
@@ -127,7 +165,7 @@ class UserLoginEvent extends Event
     /**
      * @return array
      */
-    public function getCredentials()
+    public function getCredentials(): array
     {
         return $this->offsetGet('credentials') + ['username' => '', 'password' => ''];
     }
@@ -138,7 +176,7 @@ class UserLoginEvent extends Event
      */
     public function getCredential($name)
     {
-        return isset($this->items['credentials'][$name]) ? $this->items['credentials'][$name] : null;
+        return $this->items['credentials'][$name] ?? null;
     }
 
     /**
@@ -146,7 +184,7 @@ class UserLoginEvent extends Event
      * @param mixed $value
      * @return $this
      */
-    public function setCredential($name, $value)
+    public function setCredential($name, $value): self
     {
         $this->items['credentials'][$name] = $value;
 
@@ -156,7 +194,7 @@ class UserLoginEvent extends Event
     /**
      * @return array
      */
-    public function getOptions()
+    public function getOptions(): array
     {
         return $this->offsetGet('options');
     }
@@ -167,7 +205,7 @@ class UserLoginEvent extends Event
      */
     public function getOption($name)
     {
-        return isset($this->items['options'][$name]) ? $this->items['options'][$name] : null;
+        return $this->items['options'][$name] ?? null;
     }
 
     /**
@@ -175,7 +213,7 @@ class UserLoginEvent extends Event
      * @param mixed $value
      * @return $this
      */
-    public function setOption($name, $value)
+    public function setOption($name, $value): self
     {
         $this->items['options'][$name] = $value;
 
@@ -183,26 +221,26 @@ class UserLoginEvent extends Event
     }
 
     /**
-     * @return Session|null
+     * @return SessionInterface|Session|null
      */
-    public function getSession()
+    public function getSession(): ?SessionInterface
     {
         return $this->offsetGet('session');
     }
 
     /**
-     * @return User
+     * @return UserInterface
      */
-    public function getUser()
+    public function getUser(): UserInterface
     {
         return $this->offsetGet('user');
     }
 
     /**
-     * @param User $user
+     * @param UserInterface $user
      * @return $this
      */
-    public function setUser(User $user)
+    public function setUser(UserInterface $user): self
     {
         $this->offsetSet('user', $user);
 
@@ -212,7 +250,7 @@ class UserLoginEvent extends Event
     /**
      * @return array
      */
-    public function getAuthorize()
+    public function getAuthorize(): array
     {
         return (array)$this->offsetGet('authorize');
     }
@@ -220,15 +258,15 @@ class UserLoginEvent extends Event
     /**
      * @return string|null
      */
-    public function getMessage()
+    public function getMessage(): ?string
     {
         return !empty($this->items['message'][0]) ? (string)$this->items['message'][0] : null;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getMessageType()
+    public function getMessageType(): string
     {
         return !empty($this->items['message'][1]) ? (string)$this->items['message'][1] : 'info';
     }
@@ -238,7 +276,7 @@ class UserLoginEvent extends Event
      * @param string|null $type
      * @return $this
      */
-    public function setMessage($message, $type = null)
+    public function setMessage($message, $type = null): self
     {
         $this->items['message'] = $message ? [$message, $type] : null;
 
@@ -250,7 +288,7 @@ class UserLoginEvent extends Event
      * @param string|null $type
      * @return $this
      */
-    public function defMessage($message, $type = null)
+    public function defMessage($message, $type = null): self
     {
         if ($message && !isset($this->items['message'])) {
             $this->setMessage($message, $type);
@@ -262,17 +300,17 @@ class UserLoginEvent extends Event
     /**
      * @return string|null
      */
-    public function getRedirect()
+    public function getRedirect(): ?string
     {
-        return !empty($this->items['redirect']) ? (string)$this->items['redirect'] : null;
+        return $this->items['redirect'] ?? null;
     }
 
     /**
-     * @return string|null
+     * @return int
      */
-    public function getRedirectCode()
+    public function getRedirectCode(): int
     {
-        return !empty($this->items['redirect_code']) ? (string)$this->items['redirect_code'] : 303;
+        return (int)($this->items['redirect_code'] ?? 303);
     }
 
     /**
@@ -280,7 +318,7 @@ class UserLoginEvent extends Event
      * @param int $code
      * @return $this
      */
-    public function setRedirect($path, $code = 303)
+    public function setRedirect($path, $code = 303): self
     {
         $this->items['redirect'] = $path ?: null;
         $this->items['redirect_code'] = (int)$code;
@@ -293,7 +331,7 @@ class UserLoginEvent extends Event
      * @param int $code
      * @return $this
      */
-    public function defRedirect($path, $code = 303)
+    public function defRedirect($path, $code = 303): self
     {
         if ($path && !isset($this->items['redirect'])) {
             $this->setRedirect($path, $code);
@@ -308,7 +346,7 @@ class UserLoginEvent extends Event
      * @param mixed $offset Asset name value
      * @param mixed $value  Asset value
      */
-    public function __set($offset, $value)
+    public function __set($offset, $value): void
     {
         $this->offsetSet($offset, $value);
     }
@@ -330,7 +368,7 @@ class UserLoginEvent extends Event
      * @param  mixed   $offset Asset name value
      * @return boolean         True if the value is set
      */
-    public function __isset($offset)
+    public function __isset($offset): bool
     {
         return $this->offsetExists($offset);
     }
@@ -340,8 +378,16 @@ class UserLoginEvent extends Event
      *
      * @param mixed $offset The name value to unset
      */
-    public function __unset($offset)
+    public function __unset($offset): void
     {
         $this->offsetUnset($offset);
+    }
+
+    /**
+     * @return array
+     */
+    public function __debugInfo(): array
+    {
+        return get_object_vars($this);
     }
 }

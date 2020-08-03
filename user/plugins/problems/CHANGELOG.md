@@ -1,3 +1,17 @@
+# v2.0.3
+## 05/09/2019
+
+1. [](#new)
+    * Code cleanup
+    * Pass `phpstan` tests
+    * Added `ru` and `uk` translations [#23](https://github.com/getgrav/grav-plugin-problems/pull/23)
+
+# v2.0.2
+## 12/16/2018
+
+1. [](#bugfix)
+    * Fixed an issue with checker not being initialized on Fatal Error
+
 # v2.0.1
 ## 12/07/2018
 

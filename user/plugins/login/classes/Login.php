@@ -1,22 +1,26 @@
 <?php
+
 /**
  * @package    Grav\Plugin\Login
  *
  * @copyright  Copyright (C) 2014 - 2017 RocketTheme, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
+
 namespace Grav\Plugin\Login;
 
 use Birke\Rememberme\Cookie;
 use Grav\Common\Config\Config;
 use Grav\Common\Data\Data;
+use Grav\Common\Debugger;
 use Grav\Common\Grav;
-use Grav\Common\File\CompiledYamlFile;
 use Grav\Common\Language\Language;
-use Grav\Common\Page\Page;
+use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Session;
-use Grav\Common\User\User;
+use Grav\Common\User\Interfaces\UserCollectionInterface;
+use Grav\Common\User\Interfaces\UserInterface;
 use Grav\Common\Uri;
+use Grav\Common\Utils;
 use Grav\Plugin\Email\Utils as EmailUtils;
 use Grav\Plugin\Login\Events\UserLoginEvent;
 use Grav\Plugin\Login\RememberMe\RememberMe;
@@ -29,6 +33,8 @@ use Grav\Plugin\Login\TwoFactorAuth\TwoFactorAuth;
  */
 class Login
 {
+    public const DEBUG = 0;
+
     /** @var Grav */
     protected $grav;
 
@@ -71,12 +77,23 @@ class Login
     }
 
     /**
+     * @param string $message
+     * @param array $data
+     */
+    public static function addDebugMessage(string $message, $data = [])
+    {
+        /** @var Debugger $debugger */
+        $debugger = Grav::instance()['debugger'];
+        $debugger->addMessage($message, 'debug', $data);
+    }
+
+    /**
      * Login user.
      *
      * @param array $credentials    Login credentials, eg: ['username' => '', 'password' => '']
      * @param array $options        Login options, eg: ['remember_me' => true]
      * @param array $extra          Example: ['authorize' => 'site.login', 'user' => null], undefined variables get set.
-     * @return User|UserLoginEvent  Returns event if $extra['return_event'] is true.
+     * @return UserInterface|UserLoginEvent  Returns event if $extra['return_event'] is true.
      */
     public function login(array $credentials, array $options = [], array $extra = [])
     {
@@ -92,6 +109,7 @@ class Login
         $grav->fireEvent('onUserLoginAuthenticate', $event);
 
         if ($event->isSuccess()) {
+            static::DEBUG && static::addDebugMessage('Login onUserLoginAuthenticate: success', $event);
 
             // Make sure that event didn't mess up with the user authorization.
             $user = $event->getUser();
@@ -104,6 +122,8 @@ class Login
         }
 
         if ($event->isSuccess()) {
+            static::DEBUG && static::addDebugMessage('Login onUserLoginAuthorize: success', $event);
+
             // User has been logged in, let plugins know.
             $event = new UserLoginEvent($event->toArray());
             $grav->fireEvent('onUserLogin', $event);
@@ -112,11 +132,17 @@ class Login
             $user = $event->getUser();
             $user->authenticated = true;
             $user->authorized = !$event->isDelayed();
-
+            if ($user->authorized) {
+                $event = new UserLoginEvent($event->toArray());
+                $this->grav->fireEvent('onUserLoginAuthorized', $event);
+            }
         } else {
+            static::DEBUG && static::addDebugMessage('Login failed', $event);
+
             // Allow plugins to log errors or do other tasks on failure.
+            $eventName = $event->getOption('failureEvent') ?? 'onUserLoginFailure';
             $event = new UserLoginEvent($event->toArray());
-            $grav->fireEvent('onUserLoginFailure', $event);
+            $grav->fireEvent($eventName, $event);
 
             // Make sure that event didn't mess up with the user authorization.
             $user = $event->getUser();
@@ -133,15 +159,15 @@ class Login
     /**
      * Logout user.
      *
-     * @param array                 $options
-     * @param array|User            $extra      Array of: ['user' => $user, ...] or User object (deprecated).
-     * @return User|UserLoginEvent  Returns event if $extra['return_event'] is true.
+     * @param array                         $options
+     * @param array|UserInterface           $extra      Array of: ['user' => $user, ...] or UserInterface object (deprecated).
+     * @return UserInterface|UserLoginEvent Returns event if $extra['return_event'] is true.
      */
     public function logout(array $options = [], $extra = [])
     {
         $grav = Grav::instance();
 
-        if ($extra instanceof User) {
+        if ($extra instanceof UserInterface) {
             $extra = ['user' => $extra];
         } elseif (isset($extra['user'])) {
             $extra['user'] = $grav['user'];
@@ -170,6 +196,7 @@ class Login
      * @param array $options
      *
      * @return bool
+     * @deprecated Uses the Controller::taskLogin() event
      */
     public function authenticate($credentials, $options = ['remember_me' => true])
     {
@@ -206,16 +233,17 @@ class Login
      * Create a new user file
      *
      * @param array $data
+     * @param array $files
      *
-     * @return User
+     * @return UserInterface
      */
-    public function register($data)
+    public function register(array $data, array $files = [])
     {
         if (!isset($data['groups'])) {
             //Add new user ACL settings
             $groups = (array) $this->config->get('plugins.login.user_registration.groups', []);
 
-            if (count($groups) > 0) {
+            if (\count($groups) > 0) {
                 $data['groups'] = $groups;
             }
         }
@@ -223,22 +251,79 @@ class Login
         if (!isset($data['access'])) {
             $access = (array) $this->config->get('plugins.login.user_registration.access.site', []);
 
-            if (count($access) > 0) {
+            if (\count($access) > 0) {
                 $data['access']['site'] = $access;
             }
         }
 
         $username = $this->validateField('username', $data['username']);
 
-        $file = CompiledYamlFile::instance($this->grav['locator']->findResource('account://' . mb_strtolower($username) . YAML_EXT,
-            true, true));
+        /** @var UserCollectionInterface $users */
+        $users = $this->grav['accounts'];
 
         // Create user object and save it
-        $user = new User($data);
-        $user->file($file);
+        $user = $users->load($username);
+        if ($user->exists()) {
+            throw new \RuntimeException('User ' . $username . ' cannot be registered: user already exists!');
+        }
+
+        $user->update($data, $files);
+        if (isset($data['groups'])) {
+            $user->groups = $data['groups'];
+        }
+        if (isset($data['access'])) {
+            $user->access = $data['access'];
+        }
         $user->save();
 
         return $user;
+    }
+
+    /**
+     * @param string $username
+     * @param string|null $ip
+     * @return int Return positive number if rate limited, otherwise return 0.
+     */
+    public function checkLoginRateLimit(string $username, string $ip = null): int
+    {
+        $ipKey = $this->getIpKey($ip);
+        $rateLimiter = $this->getRateLimiter('login_attempts');
+        $rateLimiter->registerRateLimitedAction($ipKey, 'ip')->registerRateLimitedAction($username);
+
+        // Check rate limit for both IP and user, but allow each IP a single try even if user is already rate limited.
+        $attempts = \count($rateLimiter->getAttempts($ipKey, 'ip'));
+        if ($rateLimiter->isRateLimited($ipKey, 'ip') || ($attempts && $rateLimiter->isRateLimited($username))) {
+            return $rateLimiter->getInterval();
+        }
+
+        return 0;
+    }
+
+    /**
+     * @param string $username
+     * @param string|null $ip
+     */
+    public function resetLoginRateLimit(string $username, string $ip = null): void
+    {
+        $ipKey = $this->getIpKey($ip);
+        $rateLimiter = $this->getRateLimiter('login_attempts');
+        $rateLimiter->resetRateLimit($ipKey, 'ip')->resetRateLimit($username);
+    }
+
+    /**
+     * @param string|null $ip
+     * @return string
+     */
+    public function getIpKey(string $ip = null): string
+    {
+        if (null === $ip) {
+            $ip = Uri::ip();
+        }
+        $isIPv4 = filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4);
+        $ipKey = $isIPv4 ? $ip : Utils::getSubnet($ip, $this->grav['config']->get('plugins.login.ipv6_subnet_size'));
+
+        // Pseudonymization of the IP
+        return sha1($ipKey . $this->grav['config']->get('security.salt'));
     }
 
     /**
@@ -257,8 +342,8 @@ class Login
                 $config = Grav::instance()['config'];
                 $username_regex = '/' . $config->get('system.username_regex') . '/';
 
-                if (!is_string($value) || !preg_match($username_regex, $value)) {
-                    throw new \RuntimeException('Username should be between 3 and 16 characters, including lowercase letters, numbers, underscores, and hyphens. Uppercase letters, spaces, and special characters are not allowed');
+                if (!\is_string($value) || !preg_match($username_regex, $value)) {
+                    throw new \RuntimeException('Username does not pass the minimum requirements');
                 }
 
                 break;
@@ -268,35 +353,35 @@ class Login
                 $config = Grav::instance()['config'];
                 $pwd_regex = '/' . $config->get('system.pwd_regex') . '/';
 
-                if (!is_string($value) || !preg_match($pwd_regex, $value)) {
-                    throw new \RuntimeException('Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+                if (!\is_string($value) || !preg_match($pwd_regex, $value)) {
+                    throw new \RuntimeException('Password does not pass the minimum requirements');
                 }
 
                 break;
 
             case 'password2':
-                if (!is_string($value) || strcmp($value, $extra)) {
+                if (!\is_string($value) || strcmp($value, $extra)) {
                     throw new \RuntimeException('Passwords did not match.');
                 }
 
                 break;
 
             case 'email':
-                if (!is_string($value) || !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                if (!\is_string($value) || !filter_var($value, FILTER_VALIDATE_EMAIL)) {
                     throw new \RuntimeException('Not a valid email address');
                 }
 
                 break;
 
             case 'permissions':
-                if (!is_string($value) || !in_array($value, ['a', 's', 'b'])) {
+                if (!\is_string($value) || !\in_array($value, ['a', 's', 'b'], true)) {
                     throw new \RuntimeException('Permissions ' . $value . ' are invalid.');
                 }
 
                 break;
 
             case 'fullname':
-                if (!is_string($value) || trim($value) === '') {
+                if (!\is_string($value) || trim($value) === '') {
                     throw new \RuntimeException('Fullname cannot be empty');
                 }
 
@@ -317,12 +402,12 @@ class Login
     /**
      * Handle the email to notify the user account creation to the site admin.
      *
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return bool True if the action was performed.
      * @throws \RuntimeException
      */
-    public function sendNotificationEmail(User $user)
+    public function sendNotificationEmail(UserInterface $user)
     {
         if (empty($user->email)) {
             throw new \RuntimeException($this->language->translate('PLUGIN_LOGIN.USER_NEEDS_EMAIL_FIELD'));
@@ -338,7 +423,7 @@ class Login
             $user->email,
             $this->grav['base_url_absolute'],
         ]);
-        $to = $this->config->get('plugins.email.from');
+        $to = $this->config->get('plugins.email.to');
 
         if (empty($to)) {
             throw new \RuntimeException($this->language->translate('PLUGIN_LOGIN.EMAIL_NOT_CONFIGURED'));
@@ -356,12 +441,12 @@ class Login
     /**
      * Handle the email to welcome the new user
      *
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return bool True if the action was performed.
      * @throws \RuntimeException
      */
-    public function sendWelcomeEmail(User $user)
+    public function sendWelcomeEmail(UserInterface $user)
     {
         if (empty($user->email)) {
             throw new \RuntimeException($this->language->translate('PLUGIN_LOGIN.USER_NEEDS_EMAIL_FIELD'));
@@ -392,12 +477,12 @@ class Login
     /**
      * Handle the email to activate the user account.
      *
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return bool True if the action was performed.
      * @throws \RuntimeException
      */
-    public function sendActivationEmail(User $user)
+    public function sendActivationEmail(UserInterface $user)
     {
         if (empty($user->email)) {
             throw new \RuntimeException($this->language->translate('PLUGIN_LOGIN.USER_NEEDS_EMAIL_FIELD'));
@@ -453,14 +538,14 @@ class Login
             $timeout = $config->get('plugins.login.rememberme.timeout');
 
             // Setup storage for RememberMe cookies
-            $storage = new TokenStorage('user://data/rememberme', $timeout);
+            $storage = new TokenStorage('user-data://rememberme', $timeout);
             $this->rememberMe = new RememberMe($storage);
             $this->rememberMe->setCookieName($cookieName);
             $this->rememberMe->setExpireTime($timeout);
 
             // Hardening cookies with user-agent and random salt or
             // fallback to use system based cache key
-            $server_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'unknown';
+            $server_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'unknown';
             $data = $server_agent . $config->get('security.salt', $this->grav['cache']->getKey());
             $this->rememberMe->setSalt(hash('sha512', $data));
 
@@ -508,8 +593,8 @@ class Login
                     $interval = $this->grav['config']->get('plugins.login.max_login_interval', 10);
                     break;
                 case 'pw_resets':
-                    $maxCount = $this->grav['config']->get('plugins.login.max_pw_resets_count', 0);
-                    $interval = $this->grav['config']->get('plugins.login.max_pw_resets_interval', 2);
+                    $maxCount = $this->grav['config']->get('plugins.login.max_pw_resets_count', 2);
+                    $interval = $this->grav['config']->get('plugins.login.max_pw_resets_interval', 60);
                     break;
             }
             $this->rateLimiters[$context] = new RateLimiter($context, $maxCount, $interval);
@@ -519,25 +604,23 @@ class Login
     }
 
     /**
-     * @param User $user
-     * @param Page $page
+     * @param UserInterface $user
+     * @param PageInterface $page
      * @param Data|null $config
      * @return bool
      */
-    public function isUserAuthorizedForPage(User $user, Page $page, $config = null)
+    public function isUserAuthorizedForPage(UserInterface $user, PageInterface $page, $config = null)
     {
         $header = $page->header();
         $rules = isset($header->access) ? (array)$header->access : [];
 
-        if ($config !== null && $config->get('parent_acl')) {
+        if (!$rules && $config !== null && $config->get('parent_acl')) {
             // If page has no ACL rules, use its parent's rules
-            if (!$rules) {
-                $parent = $page->parent();
-                while (!$rules and $parent) {
-                    $header = $parent->header();
-                    $rules = isset($header->access) ? (array)$header->access : [];
-                    $parent = $parent->parent();
-                }
+            $parent = $page->parent();
+            while (!$rules and $parent) {
+                $header = $parent->header();
+                $rules = isset($header->access) ? (array)$header->access : [];
+                $parent = $parent->parent();
             }
         }
 
@@ -546,22 +629,25 @@ class Login
             return true;
         }
 
-        if (!$user->authorized) {
+        // Deny access if user has not completed 2FA challenge.
+        if ($user->authenticated && !$user->authorized) {
             return false;
         }
 
         // Continue to the page if user is authorized to access the page.
         foreach ($rules as $rule => $value) {
-            if (is_array($value)) {
+            if (is_int($rule)) {
+                if ($user->authorize($value) === true) {
+                    return true;
+                }
+            } elseif (\is_array($value)) {
                 foreach ($value as $nested_rule => $nested_value) {
-                    if ($user->authorize($rule . '.' . $nested_rule) == $nested_value) {
+                    if ($user->authorize($rule . '.' . $nested_rule) === Utils::isPositive($nested_value)) {
                         return true;
                     }
                 }
-            } else {
-                if ($user->authorize($rule) == $value) {
-                    return true;
-                }
+            } elseif ($user->authorize($rule) === Utils::isPositive($value)) {
+                return true;
             }
         }
 
@@ -571,14 +657,14 @@ class Login
     /**
      * Check if user may use password reset functionality.
      *
-     * @param User   $user
-     * @param string $field
-     * @param int    $count
-     * @param int    $interval
+     * @param UserInterface $user
+     * @param string        $field
+     * @param int           $count
+     * @param int           $interval
      * @return bool
      * @deprecated 2.5.0 Use $grav['login']->getRateLimiter($context) instead. See Grav\Plugin\Login\RateLimiter class.
      */
-    public function isUserRateLimited(User $user, $field, $count, $interval)
+    public function isUserRateLimited(UserInterface $user, $field, $count, $interval)
     {
         if ($count > 0) {
             if (!isset($user->{$field})) {
@@ -592,7 +678,7 @@ class Login
                 }
             }
 
-            if (count($actual_resets) >= $count) {
+            if (\count($actual_resets) >= $count) {
                 return true;
             }
             $actual_resets[] = time(); // current reset
@@ -605,11 +691,11 @@ class Login
     /**
      * Reset the rate limit counter.
      *
-     * @param User   $user
-     * @param string $field
+     * @param UserInterface $user
+     * @param string        $field
      * @deprecated 2.5.0 Use $grav['login']->getRateLimiter($context) instead. See Grav\Plugin\Login\RateLimiter class.
      */
-    public function resetRateLimit(User $user, $field)
+    public function resetRateLimit(UserInterface $user, $field)
     {
         $user->{$field} = [];
     }
@@ -617,12 +703,12 @@ class Login
     /**
      * Get Current logged in user
      *
-     * @return User
+     * @return UserInterface
      * @deprecated 2.5.0 Use $grav['user'] instead.
      */
     public function getUser()
     {
-        /** @var User $user */
+        /** @var UserInterface $user */
         return $this->grav['user'];
     }
 
@@ -633,9 +719,6 @@ class Login
 
     public function getProviderLoginTemplates()
     {
-        $templates =  $this->provider_login_templates;
-
-        return $templates;
+        return $this->provider_login_templates;
     }
-
 }

@@ -1,3 +1,18 @@
+# v1.4.2
+## 08/03/2020
+
+$. [](#improved)
+    * Updated `highlight.js` to version 10.1.2
+    * Updated `highlightjs-line-numbers.js` plugin to version 2.8.0
+
+# v1.4.1
+## 09/20/2019
+
+1. [](#improved)
+    * Updated core `hightlight.pack.js` to include `SCSS` and `Twig`
+    * Updated styles and fixed a couple that were missing from blueprint due to typos
+    * FlexObjects compatibility: changed references to `Page` class to use `PageInterface`
+
 # v1.4.0
 ## 12/05/2017
 

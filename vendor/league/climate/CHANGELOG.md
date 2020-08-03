@@ -1,6 +1,50 @@
 Changelog
 =========
 
+--------
+
+## 3.5.2 - 2019-12-01
+
+### Fixed
+
+* [Checkbox] Ensure we can output when the terminal width is unknown. [#156](https://github.com/thephpleague/climate/pull/156)
+
+--------
+
+## 3.5.1 - 2019-11-24
+
+### Fixed
+
+* [Art] Be stricter about matching filenames when looking for art. [#155](https://github.com/thephpleague/climate/issues/155)
+* [Support] Provide better support for Windows using GitHub actions.
+
+--------
+
+## 3.5.0 - 2019-02-10
+
+### Added
+
+* [Arguments] Multiple arguments (eg `cli -d foo=bar -d baz=qux`) available via `$climate->arguments->getArray("d")`. [#111](https://github.com/thephpleague/climate/pull/111)
+* [Arguments] A new method (`Argument::values()`) replaces the deprecated `valueArray()` method.
+* [Spinner] Add an indeterminate progress spinner.
+* [Exceptions] All exception now implement `League\CLImate\Exceptions\Exception`.
+* [Basic] Allow single lines to be cleared using `$climate->clearLine()`. [#145](https://github.com/thephpleague/climate/issues/145).
+
+### Fixed
+
+* [Arguments] Mixing arguments with/without option values. [#122](https://github.com/thephpleague/climate/issues/122).
+* [Output] Prevent `tput` output from being sent to the terminal.
+* [Confirm] Accept more reasonable options for yes/no. [#126](https://github.com/thephpleague/climate/issues/126).
+* [Radio] Allow ENTER to be used to choose an option. [#140](https://github.com/thephpleague/climate/issues/140).
+* [Output] Improve the checks for ANSI color checks. [#128](https://github.com/thephpleague/climate/issues/128) / [#129](https://github.com/thephpleague/climate/issues/129).
+* [Art] Only match filenames when looking for art. [#130](https://github.com/thephpleague/climate/issues/130)
+
+### Changed
+
+* [Support] Dropped support for PHP 5.6 and PHP 7.0
+
+--------
+
 ## 3.4.1 - 2018-04-29
 
 ### Fixed

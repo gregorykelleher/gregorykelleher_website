@@ -1,7 +1,7 @@
 {% extends "forms/field.html.twig" %}
 
 {% block field %}
-  <div class="form-fieldset{% if vertical %} vertical{% endif %}">
+  <div class="form-fieldset{% if vertical %} vertical{% endif %}{% if field.classes is defined %} {{ field.classes }}{% endif %}">
     {% block contents %}
       <input type="checkbox" class="hidden" id="fieldset_collapsible_{{ field.name }}"{% if not field.collapsible or not field.collapsed %} checked="checked"{% endif %} />
 
@@ -48,9 +48,12 @@
       >
 
           {% block group %}
-          {% if field.text %}
-          <p>{% if grav.twig.twig.filters['tu'] is defined %}{{ field.text|tu }}{% else %}{{ field.text|t }}{% endif %}
-          <p>
+              {% if field.text %}
+                {% if grav.twig.twig.filters['tu'] is defined %}
+                    {{ field.markdown ? field.text|tu|markdown : '<p>' ~ field.text|tu ~ '</p>' }}
+                {% else %}
+                    {{ field.markdown ? field.text|t|markdown : '<p>' ~ field.t ~ '</p>' }}
+                {% endif %}
               {% endif %}
 
               {% if field.fields %}
