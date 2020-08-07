@@ -1,6 +1,6 @@
 ---
 title: Cultural Identity Essay
-date: 19:36 2/6/2018
+date: 19:36 2/6/2017
 taxonomy:
     category: blog
     tag: [Essay, College, Culture]
