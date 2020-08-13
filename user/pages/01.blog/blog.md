@@ -12,7 +12,7 @@ content:
     order:
         by: date
         dir: desc
-    limit: 6
+    limit: 7
     pagination: true
 
 feed:
