@@ -147,5 +147,5 @@ Most, if not all my work has been hosted on my own personal server and I frequen
 ---
 <br></br>
 
-<a href="/user/pages/03.resume/resume.pdf" download class="btn">Download Résumé</a> 
+<a href="/user/pages/03.resume/gregory_kelleher_resume.pdf" download class="btn">Download Résumé</a> 
 
