@@ -3,35 +3,32 @@ title: Résumé
 menu: Résumé
 ---
 
-My name's Gregory Kelleher and I'm a software engineer at Jaguar Land Rover doing R&D for the latest in electrical vehicle architecture. I have a strong passion for technology, especially with respect to building embedded systems and IoT.
+My name's Gregory Kelleher and I'm a software engineer working for Overstock in the west of Ireland.
 
-This is most evident from my two previous internships at Intel R&D, and most recently, in my current employment.
+I've always had a strong interest in technology, evident in my diverse experience across numerous technological domains. From IoT to automotive, I've built a comprehensive skillset building and testing software for real-world projects.
 
-Working as a software engineer with both companies has enabled me to demonstrate and build upon my technical skills as well as offering me a valuable opportunity to work and collaborate with experts in the field; within a professional domain.
-
-Outside of work, my interests in technology extend from electronics to web development. I enjoy tinkering with pet projects, and in my own time, I maintain an up-to-date website on my own VPS where I occasionally blog on what I'm doing.
-
-My experience not only lies with systems and embedded programming, but I also have a strong background in web development. I've freelanced and developed many progressive websites/applications and prototypes for a number of clients over the last few years and still continue this at present.
-
-Lastly, education is a personal motivation and I strive to encourage other individuals to pursue an interest in the field. This is visible in my volunteer work at CoderDojo, my time as a class instructor for CTY Ireland, and my educational blog and YouTube channel.
-
-I've also presented at Dublin Maker Faire with my university back in the day and have attended several Intervarsity Hack-a-thons to promote the field of technology.
+With a background in R&D development for Jaguar Land Rover and Intel, I've also been fortunate to have been involved in some cutting-edge projects down through the years.
 
 ---
 <br></br>
 
 ##Experience
 
+**Overstock.com Ltd** 
+
+_Software Engineer • January 2021 - current_
+
+Currently in a new role at Overstock.com working as part of their e-commerce division.
+
 **Jaguar Land Rover Research & Development Ireland Ltd** 
 
-_Automotive Software Engineer • August 2018 - Current_
+_Automotive Software Engineer • August 2018 - January 2021_
 
-Currently working across a broad software domain that encompasses both research and production projects.
+Worked across a broad software domain that encompasses both research and production projects.
 
 Extensive experience writing modern C++ for next-generation Electrical Vehicle Architecture (EVA). Strong focus on delivering ASIL-D rated software with strict compliance to MISRA and AutoSAR coding standards.
 
 Long-term involvement on the Land Rover Defender (L663) programme, developing production software to enable SOTA capabilities for network diagnostics.
-
 
 **Intel Research & Development Ireland Ltd**
 
