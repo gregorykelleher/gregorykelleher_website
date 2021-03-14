@@ -90,9 +90,15 @@ Taking inspiration from the requirement, here's what this could look like:
 auto const messages{ extract_messages(input) };
 ```
 
-Ground-breaking I know. But I'm doing my best to follow the [KISS Principle](https://en.wikipedia.org/wiki/KISS_principle) here. This may look trivial but simplicity is the ultimate sophistication. If truth be told, it'll be a little tricky staying on course with this singular public API.
+Ground-breaking I know. This may look trivial, but that's the point. It _should_ be trivial. Simplicity is the ultimate sophistication. Writing in this manner could be described as [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming), where the "what" takes precendence over the "how".
 
-For starters, what are we returning? What type does `messages` hold?
+I can subscribe to this dogma; I find it easier to read expressions than follow control flow. In fact, Dijkstra has a quote on this, which fits quite nicely:
+
+> "[...] our intellectual powers are rather geared to master static relations and that our powers to visualize processes evolving in time are relatively poorly developed.
+
+> For that reason we should do (as wise programmers aware of our limitations) our utmost to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible"
+
+Anyhow, now begs the question; what are we returning from `extract_messages()`? What type does `messages` hold?
 
 Looking at the `sample_input.csv` each line could represent a `message` containing the data for each of the three fields:
 
@@ -223,7 +229,7 @@ The first three functions we hypthosised above are evident here:
 
 That's half the program complete already! Well almost.
 
-From the definition of `extract_messages()` and its name alone, its intent is obvious. This is no accident. Rather its a careful expression of the values I've absorbed from Clean Code.
+From the definition of `extract_messages()` and its name alone, its intent is obvious. 
 
 I could just as easily have declared it as `read_messages()` or `MessageParsedInput()` but neither of those names properly communicate the purpose of the function.
 
@@ -261,6 +267,16 @@ The more arguments to a function, the greater the difficulty in writing the test
 I've also defined both of these functions as being `static` meaning they're only visible to other functions within the same file (or to be precise, _translation unit_).
 
 This means that they're inaccessible from the public API and aren't declared within the `csv_reader.h` header. This is intentional, since the client doesn't need to know these functions even exist.
+
+Furthermore, there are a few important properties to these functions that also deserve a mention.
+
+Both can be described as being _pure functions_. A pure function is simply a function that, given the same imput, should always produce the same output. In a word, _deterministic_.
+
+By definition then, pure functions do not cause side effects. Their predictable nature and transparency make them ideal building blocks for our programs, hence why we should favour them whenever possible.
+
+For example, in the `get_message()` function, I'm able to "daisy-chain" my pure functions to express a composition. Where the return of `get_fields()` can be _composed_ using the return of `extract_fields()` as its inline argument.
+
+Rather than having a monolithic function taking multiple arguments, this approach works on evaluating a sequence of nesting functions instead, each with a singular argument. In functional programming, this technique could be described as [currying](https://en.wikipedia.org/wiki/Currying).
 
 ####Check Field Validity and Get the Field
 
@@ -330,7 +346,11 @@ Finally, everyone's favourite part - unit testing. Frequently this is where code
 
 It needn't be exhaustive but it should be thorough.
 
-I hadn't touched on testability too much in the previous sections, but I was careful to write every function in a deliberate manner, to aid unit testing. Functions are small, focused and monadic.
+I hadn't touched on testability too much in the previous sections, but I was careful to write every function in a deliberate manner, to aid unit testing. Functions are small, focused and pure.
+
+Additionally, I'm solely testing the public interface of the program, i.e. `extract_messages()`. Since it's the only non-static function, I really don't have another choice. This of course is by design. I'm intentionally restricting the unit tests to be purely black-box tests.
+
+In general, I find this approach leads to less brittle tests. There's less jeopardy in the public API changing down the line, whereas the underlying implementation details are more subject to change. Lastly, I'm also avoiding the need for using mocks in any capacity.
 
 Let's jump into it and write the first test case for `extract_messages()`:
 
