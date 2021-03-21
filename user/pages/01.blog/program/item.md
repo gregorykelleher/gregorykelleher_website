@@ -76,7 +76,7 @@ Hence why I like to start from the opposite end. Looking at what the _output_ of
 
 This is contrary to what I frequently find when integrating others' software. Usually there's a span of time where I'm scanning through a header file, struggling to locate _that_ function that I want to use. 
 
-> Oh, and I need to call this one beforehand? Oh right, of course. I need to have an input for the parameter of that function, .etc.
+> Oh, and I need to instantiate this object beforehand? Oh right, of course. And I also need to cast before I can pass that as a parameter, gotcha .etc.
 
 To avoid potential internal monologue like above, it's crucial to pay attention to the client interface, right from the outset.
 
@@ -102,9 +102,9 @@ Anyhow, now begs the question; what are we returning from `extract_messages()`? 
 
 Looking at the `sample_input.csv` each line could represent a `message` containing the data for each of the three fields:
 
-| Messages  | Time Stamp | Animal 		| Number |
-| --------- | ---------- | ------------ | -----	 |
-| message   | 1597324871 | hippopotamus |	10   |
+| Time Stamp | Animal        | Number |
+| ---------- | ------------- | ------ |
+| 1597324871 | hippopotamus  | 10     |
 
 So `message` would hold the time stamp, the animal and the number. A `struct` sounds ideal:
 
@@ -235,12 +235,11 @@ I could just as easily have declared it as `read_messages()` or `MessageParsedIn
 
 To borrow the book's advice, functions should have a verb or verb phrase. For consistency too, it's best to stick to one word per concept. I prefer `extract` to `read` because it's more descriptive.
 
-One of the most important take-aways from Clean Code is that functions should also be small. Simple but effective advice.
+One of the most important take-aways from Clean Code is that functions should also be small. Not necessarily as small _as possible_ but rather as small as can be, maintaining context.
 
 I could easily include the `is_message_valid()` logic within `extract_messages()` in the definition above. Yet I choose to wrap this logic in its own function. This also helps to maintain the logic at the right level of abstraction.
 
 !!! Similiar to classes, functions work best if they follow a _single responsibility principle_, i.e. doing one thing and doing it well
-
 
 ####Check Message Validity and Get the Message
 
@@ -260,23 +259,39 @@ static Message get_message(std::string const &line)
 }
 ```
 
-The next two functions are again, small. They each take a single argument (i.e. they're _monadic_). It may sound like a small thing to note, but limiting the number of arguments to a function improves testability.
+The next two functions are again, small. They each take a single argument (i.e. they're _unary_). It may sound like a small thing to note, but limiting the number of arguments to a function improves testability.
 
 The more arguments to a function, the greater the difficulty in writing the test cases to ensure all the various combinations of arguments work in tandem.
 
-I've also defined both of these functions as being `static` meaning they're only visible to other functions within the same file (or to be precise, _translation unit_).
-
-This means that they're inaccessible from the public API and aren't declared within the `csv_reader.h` header. This is intentional, since the client doesn't need to know these functions even exist.
-
-Furthermore, there are a few important properties to these functions that also deserve a mention.
-
-Both can be described as being _pure functions_. A pure function is simply a function that, given the same imput, should always produce the same output. In a word, _deterministic_.
+Furthermore, both can be described as being _pure functions_. A pure function is simply a function that, given the same imput, should always produce the same output. In a word, _deterministic_.
 
 By definition then, pure functions do not cause side effects. Their predictable nature and transparency make them ideal building blocks for our programs, hence why we should favour them whenever possible.
 
+!! Truth be told, I do use GSL precondition assertions within, which in turn will terminate the program given an invalid case (i.e. side-effect). So strictly speaking, these functions aren't entirely kosher. Alas this is unavoidable when interacting with file I/O
+
 For example, in the `get_message()` function, I'm able to "daisy-chain" my pure functions to express a composition. Where the return of `get_fields()` can be _composed_ using the return of `extract_fields()` as its inline argument.
 
-Rather than having a monolithic function taking multiple arguments, this approach works on evaluating a sequence of nesting functions instead, each with a singular argument. In functional programming, this technique could be described as [currying](https://en.wikipedia.org/wiki/Currying).
+So rather than having a monolithic function taking multiple arguments, this approach works on evaluating a sequence of nesting functions instead, each with a singular argument.
+
+!!! In functional programming, a related technique also exists called [currying](https://en.wikipedia.org/wiki/Currying)
+
+On another note, I've also defined both of these functions as being `static` meaning they're only visible to other functions within the same file (or to be precise, _translation unit_).
+
+This means that they're inaccessible from the public API and aren't declared within the `csv_reader.h` header. This is intentional, since the client doesn't need to know these functions even exist.
+
+This fits quite neatly with John Ousterhout's advocacy for _deep classes_ in his book, _"A Philosophy of Software Design"_.
+
+![classes](classes.svg)
+
+A class, or indeed, a namespace or module, consist of two parts, an _interface_ and _implementation_.
+
+An interface describing _"what"_ a class has to do, and the implementation describing _"how"_ it does it.
+
+In designing a good class, we want to minimise the complexity of the interface (i.e. the cost to the user) whilst maximising the usefulness of its underlying implementation (i.e. the benefit to the user).
+
+A deep class therefore, is a class that embraces those qualities, with a concise interface abstracting deep internal functionality.
+
+It can be said then, that `csv_reader` matches this description thus far; with a singular `extract_messages()` public interface hiding the actual implementation of extraction.
 
 ####Check Field Validity and Get the Field
 
